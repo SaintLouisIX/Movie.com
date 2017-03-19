@@ -1,0 +1,811 @@
+/* RESET STYLES */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, 
+big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, 
+details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, 
+video {margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; font: inherit; vertical-align: baseline; text-decoration: none;} 
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;} body {line-height: 1;} 
+ol, ul {list-style: none;} blockquote, q {quotes: none;} blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none;} 
+table {border-collapse: collapse; border-spacing: 0;} body {cursor: default;} strong, b {font-weight: bold;} em, i {font-style: italic;}
+
+/* ############################################## */
+
+/* PAGE SECTIONS STYLES */
+#header-top {
+	position: fixed;
+	width: 100%;
+   background: #222222 url(../img/header-top.png) repeat-x 0 0;
+	z-index: 10;
+}
+
+#featured-movies-wrapper {
+   width: 100%;
+   background: #ffffff;
+}
+
+#content-wrapper {
+   width: 100%;
+   background: #efefef url(../img/arrow-down.png) repeat-x 0 0;
+}
+
+#main-posts {
+   position: relative;
+   width: 565px;
+   float: left;
+}
+ 
+#side-bar {
+   position: relative;
+   width: 255px;
+   float: right;
+}
+ 
+#footer {
+   width: 100%;
+   background: #181818 url(../img/footer-bg.png) repeat-x 0 0;
+}
+
+.center-wrapper {
+   position: relative;
+   width: 870px;
+   margin: 0 auto;
+}
+
+#top-nav {
+	height: 44px;
+	width: 870px;
+}
+
+.title {
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+
+/* Top Navigation Menu */
+.nav {
+   position: absolute;
+   top: 0;
+   left: 220px;
+}
+ 
+.nav li {
+   display: block;
+   float: left;
+   height: 24px;
+   padding: 10px 0;
+   position: relative;
+}
+ 
+.nav li a {
+   display: block;
+   height: 24px;
+   line-height: 24px;
+   padding: 0 15px;
+   background: url(../img/nav-border.png) no-repeat center right;
+   color: #eeeeee;
+}
+
+.nav li:last-child a {background: none;}
+
+/* Top Navigation Dropdown Menu */
+
+.nav li .dropdown {
+	padding: 0;
+	position: absolute;
+	top: 44px;
+	left: 0;
+	width: 120px;
+	display: none;
+	visibility: hidden;
+	background: #222222 url(../img/header-top.png);
+}
+
+.nav li .dropdown li {display: block;}
+
+.nav li .dropdown li a {background: none;}
+
+.nav li:hover .dropdown {
+	display: block;
+	visibility: visible;
+}
+
+/* Search Box Style */
+#search-form {
+   position: absolute;
+   top: 7px;
+   right: 0;
+}
+
+#search-box {
+   width: 150px;
+   height: 30px;
+   padding: 0 40px 0 10px;
+   border: none;
+   outline: none;
+	background: #ffffff;
+	background: -webkit-linear-gradient(top, #ffffff 0%, #e6e6e6 100%);
+	background: -moz-linear-gradient(top, #ffffff 0%, #e6e6e6 100%);
+	background: -o-linear-gradient(top, #ffffff 0%, #e6e6e6 100%);
+	background: -ms-linear-gradient(top, #ffffff 0%, #e6e6e6 100%);
+	background: linear-gradient(top, #ffffff 0%, #e6e6e6 100%);
+	border-radius: 2px;
+}
+
+#search-submit {
+   position: absolute;
+   display: block;
+   cursor: pointer;
+   width: 30px;
+   height: 30px;
+   top: 0;
+   right: 0;
+   border: none;
+   outline: none;
+   background: url(../img/search-icon.png) no-repeat 0 0;
+}
+
+/* Header Featured Movie Section */
+#header-bottom {
+	width: 100%;
+	background: #222222 url(../img/header-bottom.png) repeat-x 0 0;
+}
+
+#header-featured-movie {
+   overflow: hidden;
+   height: 446px;
+}
+ 
+/* Header Featured Movie Cover */
+#header-featured-movie .movie-cover {
+   position: absolute;
+   top: 70px;
+   left: 110px;
+   width: 230px;
+   height: 320px;
+}
+
+/* Header Featured Movie Rating */
+#header-featured-movie .movie-rating {
+   position: absolute;
+   top: 405px;
+   left: 135px;
+}
+ 
+#header-featured-movie .movie-rating li {
+   display: block;
+   float: left;
+   cursor: pointer;
+   width: 18px;
+   height: 18px;
+   background: url(../img/star-icon.png) no-repeat 0 0;
+}
+ 
+#header-featured-movie .movie-rating li.rated {background-position: 0 -18px;}
+
+/* Header Featured Movie Titles */
+#header-featured-movie h1 {
+   position: absolute;
+   top: 88px;
+   left: 385px;
+}
+ 
+#header-featured-movie h3 {
+   position: absolute;
+   top: 65px;
+   left: 385px;
+}
+ 
+/* Header Featured Movie Paragraph */
+#header-featured-movie p {
+   position: absolute;
+   top: 120px;
+   left: 385px;
+   width: 350px;
+   padding: 15px;
+   background: #1b1b1b;
+	opacity: 0.8;
+}
+
+/* Header Featured Movie Trailer Slider */
+#header-featured-movie #movie-trailers {
+   position: absolute;
+   overflow: hidden;
+   top: 270px;
+   left: 385px;
+   width: 380px;
+   height: 122px;
+   line-height: 1.2;
+}
+ 
+#header-featured-movie .movie-trailer-slider li {
+   display: block;
+   float: left;
+   width: 172px;
+   height: 122px;
+   margin-right: 36px;
+   background: #1b1b1b;
+}
+ 
+#header-featured-movie .movie-trailer-slider li a {
+   display: block;
+   padding: 5px;
+}
+
+#header-featured-movie .movie-trailer-slider .thumbnail {
+	height: 98px;
+	width: 162px;
+}
+
+/* Header Movie Trailers Next & Prev Buttons */
+#header-featured-movie .md-prev-button,
+#header-featured-movie .md-next-button {
+   position: absolute;
+   display: block;
+   width: 11px;
+   height: 14px;
+   top: 325px;
+   left: 360px;
+   background: url(../img/next-prev.png) no-repeat 0 0;
+}
+
+#header-featured-movie .md-next-button {
+   left: 780px;
+   background-position: -11px 0;
+}
+
+/* Body Content Style */
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	text-align: justify;
+}
+
+/* Header Top Navigation Menu Links */
+#header-top .nav li a {
+   font-weight: bold;
+   font-size: 12px;
+   color: #eeeeee;
+}
+ 
+/* Header Featured Movie Title */
+#header-featured-movie h1 {
+   font-weight: bold;
+   font-size: 20px;
+   text-align: left;
+   color: #eeeeee;
+}
+ 
+/* Header Featured Movie Sub-Title */
+#header-featured-movie h3 {
+   text-transform: uppercase;
+   text-align: left;
+   font-weight: bold;
+   font-size: 16px;
+   color: #5293c2;
+}
+ 
+/* Header Featured Movie Paragraph */
+#header-featured-movie p {
+   font-weight: bold;
+   font-size: 12px;
+   line-height: 18px;
+   color: #979797;
+}
+ 
+/* Header Featured Movie Trailer Title */
+#header-featured-movie .movie-trailer-slider li a h4 {
+   text-transform: uppercase;
+   text-align: left;
+   font-weight: bold;
+   font-size: 10px;
+   color: #979797;
+}
+
+/* ############################################## */
+
+/* Four Columns */
+.one-fourth {
+   position: relative;
+   float: left;
+   width: 185px;
+   margin-right: 43px;
+}
+
+.center-wrapper li:nth-child(4n+0) .one-fourth {margin: 0;}
+
+#featured-movies {padding: 35px 0;}
+ 
+/* Featured Movies Slider */
+#featured-movies-slider-wrapper {
+   width: 870px;
+   height: 260px;
+   overflow: hidden;
+}
+
+#featured-movies .thumbnail {
+	height: 122px;
+	width: 182px;
+}
+
+#featured-movies .mm-prev-button,
+#featured-movies .mm-next-button {
+   position: absolute;
+   display: block;
+   width: 9px;
+   height: 12px;
+   top: 41px;
+   left: 230px;
+   background: url(../img/next-prev-2.png) no-repeat 0 0;
+}
+ 
+#featured-movies .mm-next-button {
+   left: 250px;
+   background-position: -9px 0;
+}
+ 
+#featured-movies .see-all {
+   position: absolute;
+   display: block;
+   top: 40px;
+   right: 0;
+   padding-left: 20px;
+   line-height: 14px;
+   background: url(../img/arrow.png) no-repeat left center;
+}
+
+/* Featured Movies & Content Wrapper Titles */
+#featured-movies h4,
+#content-wrapper h4 {
+   font-family: Helvetica, Times new roman, sans-serif;
+	font-weight: bold;
+   text-transform: uppercase;
+   text-align: left;
+   font-size: 18px;
+   line-height: 26px;
+   color: #999999;
+}
+
+/* Featured Movies Posts Titles */
+#featured-movies h2,
+#featured-movies .see-all {
+   font-weight: bold;
+   font-size: 12px;
+   line-height: 18px;
+   color: #5293c2;
+}
+ 
+/* Featured Movies Post Paragraph */
+#featured-movies p {
+   font-size: 12px;
+   color: #979797;
+   line-height: 16px;
+}
+
+#featured-movies .descriptions p {
+	display: block;
+   height: 50px;
+   overflow: hidden;
+   /* white-space: nowrap;   
+   text-overflow: ellipsis; */
+}
+
+#featured-movies ul {margin-top: 20px;}
+
+#featured-movies #movie-thumbnails {margin-top: 0;}
+
+/* Views & Likes */
+.likes-views {display: block;}
+ 
+.likes-views li {
+   display: block;
+   float: left;
+   padding-left: 5px;
+   padding-right: 25px;
+}
+
+.likes-views li:last-child {
+   padding-right: 0;
+}
+ 
+.likes-views li a.likes {
+   padding-left: 15px;
+   background: url(../img/likes.png) no-repeat 0 2px;
+}
+ 
+.likes-views li a.views {
+   padding-left: 20px;
+   background: url(../img/views.png) no-repeat 0 2px;
+}
+ 
+.likes-views li a {
+   font-weight: bold;
+   font-size: 11px;
+   color: #979797;
+}
+
+/* ############################################## */
+
+/* Main & Sidebar Styles */
+
+#content-wrapper {
+   padding-top: 50px;
+   padding-bottom: 25px;
+}
+
+#content-wrapper .main-post,
+#content-wrapper .sidebar-post {padding-bottom: 40px;}
+
+#content-wrapper img {margin-top: 25px;}
+
+#content-wrapper .main-post img {width: 565px;}
+#content-wrapper .sidebar-post img {width: 255px;}
+
+#content-wrapper p {margin: 10px 0;}
+
+#content-wrapper .main-post-box {
+   position: relative;
+   overflow: hidden;
+   padding-bottom: 15px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+	background: #f6f6f6;
+	border: 1px solid #999999;
+}
+ 
+#content-wrapper .main-post-box div {
+	padding: 25px;
+	padding-bottom: 0;
+}
+ 
+#content-wrapper .main-post-box img {
+   width: 120px;
+   height: 140px;
+   border: 3px solid #999999;
+   margin: 0;
+}
+
+/* Main & Sidebar Posts Titles */
+#content-wrapper h1,
+#content-wrapper h3 {
+   font-size: 20px;
+   line-height: 28px;
+   text-align: left;
+   color: #5293c2;
+}
+ 
+/* Main & Sidebar Paragraph */
+#content-wrapper p {
+   font-size: 13px;
+   line-height: 18px;
+   color: #7c7e85;
+}
+
+#content-wrapper .main-post-box .main-actors {
+	display: block;
+   width: 260px;
+   overflow: hidden;
+   white-space: nowrap;   
+   text-overflow: ellipsis;
+}
+
+/* Main Post Box Title */
+#content-wrapper .main-post-box h1 {
+   font-weight: bold;
+   font-size: 14px;
+	text-transform: uppercase;
+	text-align: left;
+   line-height: 18px;
+   color: #5293c2;
+}
+
+#content-wrapper .main-post-box h4 {
+   font-size: 16px;
+}
+
+/* Images Video Icons */
+.video-icon {position: relative;}
+ 
+.video-icon:before {
+   position: absolute;
+   display: block;
+   content: '';
+   width: 35px;
+   height: 35px;
+   bottom: 10px;
+   right: 10px;
+   background: url(../img/video-icon.png) no-repeat 0 0;
+}
+ 
+#side-bar .video-icon:before {bottom: 25px;}
+
+/* Float Left & Right */
+.float-left {float: left;}
+.float-right {float: right;}
+
+/* Clear Floats */
+.clear-both {clear: both;}
+
+#content-wrapper .main-post-box .clear-both {
+   clear: both;
+   padding: 0 !important;
+}
+
+/* Transparency */
+a:hover {opacity: 0.8;}
+
+/* ############################################## */
+
+/* Footer */
+
+#footer {padding: 40px 0;}
+ 
+#footer h3 {margin: 10px 0;}
+ 
+#footer p {padding: 10px 0;}
+ 
+/* Links List */
+.links-list li {
+   display: block;
+   border-bottom: 1px solid #343434;
+}
+ 
+.links-list li a {
+   position: relative;
+   display: block;
+   height: 26px;
+}
+ 
+.links-list li a span {
+   position: absolute;
+   top: 7px;
+   right: 0;
+}
+ 
+/* Social Icons */
+.social-icons {
+   width: 98px;
+   padding: 10px 0;
+}
+.social-icons li {
+   float: left;
+   margin-right: 4px;
+   margin-bottom: 4px;
+}
+ 
+.social-icons li:last-child {margin: 0;}
+ 
+.social-icons li a {
+   display: block;
+   width: 28px;
+   height: 28px;
+}
+ 
+/* Text Align Center */
+.text-align-center {text-align: center;}
+ 
+/* Text Style Italic */
+em {font-style: italic;}
+ 
+/* Align Center */
+.align-center {margin: 0 auto;}
+ 
+/* Horizontal Line */
+hr {
+   border: none;
+   border-top: 1px solid #343434;
+}
+
+/* Five Columns */
+.one-fifth,
+.one-fifth-last {
+   position: relative;
+   float: left;
+   width: 145px;
+   margin-right: 36px;
+}
+
+.one-fifth-last {margin: 0;}
+
+/* Footer Titles */
+#footer h3 {
+   font-family: Verdana, sans-serif;
+   text-transform: uppercase;
+   text-align: left;
+   font-weight: bold;
+   font-size: 17px;
+   letter-spacing: -1px;
+   line-height: 26px;
+   color: #5293c2;
+}
+ 
+/* Footer Paragraphs */
+#footer p {
+   font-weight: bold;
+   font-size: 12px;
+   line-height: 16px;
+   color: #868686;
+}
+ 
+/* Footer Links List */
+.links-list li a {
+   text-transform: uppercase;
+   font-weight: bold;
+   font-size: 12px;
+   line-height: 26px;
+   color: #868686;
+}
+ 
+.links-list li a span {
+   font-size: 10px;
+   font-weight: bold;
+   line-height: 12px;
+}
+
+/* Add Extra Margin */
+.extra-margin {margin-top: 40px;}
+
+
+/* Themes */
+.light {
+	background: #efefef !important;
+}
+
+.dark {
+	background: #181818 !important;
+}
+
+/* Gallery */
+.gallery .thumbnails img {
+	height: 90px;
+	width: 143px;
+	border: 4px solid #868686;
+	margin-right: 24px;
+}
+
+.gallery .thumbnails iframe {
+	height: 90px;
+	width: 143px;
+	border: 4px solid #868686;
+	margin-right: 24px;
+}
+
+.gallery .thumbnails img:nth-child(5n+0) {margin-right: 0;}
+
+.gallery .thumbnails iframe:nth-child(5n+0) {margin-right: 0;}
+		
+.gallery .thumbnails img:hover {
+	border: 4px solid #5293c2;
+	cursor:pointer;
+}
+
+.gallery .thumbnails, .preview {
+	margin-top: 24px;
+}
+
+.gallery .preview img {
+	border: 4px solid #868686;
+	margin-top: 0 !important;
+	width: 860px;
+}
+
+.gallery .preview iframe {
+	border: 4px solid #868686;
+	width: 860px;
+	height: 480px;
+}
+
+.gallery p {
+	margin: 20px !important;
+}
+
+/* Login and Sign up forms */
+/* Style the tab */
+.modal .tab {
+    overflow: hidden;
+    width: 60%;
+    margin: 3% auto -8px auto;
+}
+
+/* Style the buttons inside the tab */
+.modal .tab button {
+    background-color: #666666;
+    color: #efefef;
+    float: left;
+    outline: none;
+}
+
+/* Change background color of buttons on hover */
+.modal .tab button:hover {
+    background-color: #181818;
+    color: #ffffff;
+}
+
+/* Create an active/current tablink class */
+.modal .tab button.active {
+    background-color: #efefef;
+    color: #181818;
+}
+
+/* Style the tab content */
+.modal .tabcontent {
+    display: none;
+}
+
+/* Full-width input fields */
+.modal input[type=text], input[type=password] {
+	width: 100%;
+	padding: 14px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #cccccc;
+	box-sizing: border-box;
+}
+
+/* Set a style for the buttons */
+.modal button {
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+}
+
+/* Extra styles for the login and cancel buttons */
+.login, .signup {
+	width: auto;
+	background-color: #4CAF50;
+	color: #ffffff;
+	float: left;
+}
+
+.cancel {
+	width: auto;
+	background-color: #f44336;
+	color: #ffffff;
+	float: right;
+}
+
+.login, .signup, .cancel {width: 49%;}
+
+.modal .container {padding: 25px;}
+
+/* The Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #efefef;
+    text-align: left;
+    margin: 0 auto;
+    width: 60%;
+}
+
+/* The Close Button (x) */
+.close {
+    position: relative;
+    float: right;
+    top: 10px;
+    right: 25px;
+    color: #000000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Change styles for the buttons on extra small screens */
+@media screen and (max-width: 300px) {.cancel, .login, .signup {width: 100%;}}

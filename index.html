@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+
+	<!-- Title -->
+	<title>Movie.com | Home</title>
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/style.css" media="screen">
+	
+	<!-- Scripts (jQuery, Carousel Plugin, Functions) -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="js/jcarousellite_1.0.1.min.js"></script>
+	<script src="js/myscript.js"></script>
+</head>
+<body>
+	<div id="header-top">
+		<div id="top-nav" class="center-wrapper">
+			<a class="title" href="index.html"><img src="img/title.png" alt="Movie.com"></a>
+
+			<ul class="nav">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="" onclick="return false;">Movies &amp; TV</a>
+					<ul class="dropdown">
+						<li><a href="pages/movies.html">Top Movies</a></li>
+						<li><a href="pages/tv-shows.html">Top TV Shows</a></li>
+						<li><a href="pages/premieres.html">Premieres</a></li>
+					</ul>
+				</li>
+				<li><a href="" onclick="return false;">Articles</a>
+					<ul class="dropdown">
+						<li><a href="pages/news.html">News</a></li>
+						<li><a href="pages/reviews.html">Reviews</a></li>
+						<li><a href="pages/reports.html">Reports</a></li>
+						<li><a href="pages/interviews.html">Interviews</a></li>
+					</ul>
+				</li>
+				<li><a href="" onclick="return false;">Media</a>
+					<ul class="dropdown">
+						<li><a href="pages/trailers.html">Trailers</a></li>						
+						<li><a href="pages/pictures.html">Pictures</a></li>
+						<li><a href="pages/videos.html">Videos</a></li>
+					</ul>
+				</li>
+				<li><a href="" onclick="menuLoginPressed(event)">Login</a></li>
+			</ul>
+			
+			<form id="search-form" action="#">
+				<input type="text" id="search-box" name="search-box" placeholder="Search Box">
+				<input type="submit" value="" id="search-submit">
+			</form>
+		</div>
+		
+		<div id="my-form" class="modal">
+			<div class="tab">
+			  <button id ="Login_tablink" class="tablink" onclick="openTab(event, 'Login_tabcontent')"><b>Login</b></button>
+			  <button id ="SignUp_tablink" class="tablink" onclick="openTab(event, 'SignUp_tabcontent')"><b>Sign up</b></button>
+			</div>
+		
+			<div id="Login_tabcontent" class="tabcontent">
+				<form id="login-form" class="modal-content">
+					<div onclick="document.getElementById('my-form').style.display='none'; document.getElementById('login-form').reset();" class="close" title="Close Modal">&times;</div>
+					<div class="container">
+						<label><b>Username</b></label>
+						<input type="text" placeholder="Enter Username" name="username" required>
+		
+						<label><b>Password</b></label>
+						<input type="password" placeholder="Enter Password" name="password" required>
+		
+						<div>
+							<button type="submit" class="login"><b>Login</b></button>
+							<button type="button" onclick="document.getElementById('my-form').style.display='none'; document.getElementById('login-form').reset();" class="cancel"><b>Cancel</b></button>
+						</div>
+						<input type="checkbox" checked="checked"> Remember me
+					</div>
+				</form>
+			</div>
+		
+			<div id="SignUp_tabcontent" class="tabcontent">
+				<form id="signup-form" class="modal-content">
+					<div onclick="document.getElementById('my-form').style.display='none'; document.getElementById('Sign up').reset();" class="close" title="Close Modal">&times;</div>
+					<div class="container">
+						<label><b>Email</b></label>
+						<input type="text" placeholder="Enter Email" name="email" required>
+		
+						<label><b>Password</b></label>
+						<input type="password" placeholder="Enter Password" name="password" required>
+		
+						<label><b>Repeat Password</b></label>
+						<input type="password" placeholder="Repeat Password" name="password-repeat" required>
+						<input type="checkbox" required> By creating an account you agree to our <a href="#">Terms & Privacy</a>.
+		
+						<div>
+							<button type="submit" class="signup"><b>Sign up</b></button>					
+							<button type="button" onclick="document.getElementById('my-form').style.display='none'; document.getElementById('Sign up').reset();" class="cancel"><b>Cancel</b></button>
+						</div>
+						<input type="checkbox" checked="checked"> Remember me
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="header-bottom">
+		<div id="header-featured-movie" class="center-wrapper">
+			<img src="img/content/main_movie.png" alt="The Chronicles of Riddick" class="movie-cover">
+			
+			<ul class="movie-rating">
+				<li class="rated"></li>
+				<li class="rated"></li>
+				<li class="rated"></li>
+				<li class="rated"></li>
+				<li class="rated"></li>
+				<li class="rated"></li>
+				<li class="rated"></li>
+				<li class="rated"></li>
+				<li class="rated"></li>
+				<li></li>
+			</ul>
+
+			<h3>Movie of the Day</h3>
+			<a href="#"><h1>The Chronicles of Riddick</h1></a>
+			<p>Galactic criminal Riddick is on the run, with bounty hunters on his tail. He receives information that a warrior army 
+				known as the Necromongers is annihilating all human life in the galaxy in a bid for universal dominance. It is believed 
+				that he is the one man who can defeat the Necromongers and their leader, the evil Lord Marshal.</p>
+
+			<div id="movie-trailers">
+				<div id="movie-trailer-slider">
+					<ul class="movie-trailer-slider">
+						<li>
+							<a href="#">
+								<img class="thumbnail" src="img/content/trailer_1.png" alt="">
+								<h4>The Hunger Games</h4>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img class="thumbnail" src="img/content/trailer_2.png" alt="">
+								<h4>Captain America</h4>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img class="thumbnail" src="img/content/trailer_3.png" alt="">
+								<h4>The Hobbit</h4>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img class="thumbnail" src="img/content/trailer_4.png" alt="">
+								<h4>Lucy</h4>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Movie Trailer Buttons -->
+			<a href="" class="md-prev-button"></a>
+			<a href="" class="md-next-button"></a>
+		</div>
+	</div>
+
+	<div id="featured-movies-wrapper">
+		<div id="featured-movies" class="center-wrapper">
+		
+			<h4>Movies of the Month</h4>
+			<a class="see-all" href="pages/movies.html">See All</a>
+
+			<!-- Prev & Next Buttons -->
+			<a href="" class="mm-prev-button"></a>
+			<a href="" class="mm-next-button"></a>
+
+			<div id="featured-movies-slider-wrapper">
+				<div id="featured-movies-slider">
+					<ul>
+						<li>
+							<div class="one-fourth descriptions">
+								<a href="#"><img class="thumbnail" src="img/content/movie_2.png" alt=""></a>
+								<a href="#"><h2>Transformers</h2></a>
+								<p>An ancient struggle between two Cybertronian races, the Autobots and the Decepticons, comes to Earth, 
+									with a clue to the ultimate power held by a teenager.</p>
+								<ul class="likes-views">
+									<li><a class="likes" href="#">165</a></li>
+									<li><a class="views" href="#">2,350</a></li>
+								</ul>
+							</div>
+						</li>
+
+						<li>
+							<div class="one-fourth descriptions">
+								<a href="#"><img class="thumbnail" src="img/content/movie_3.png" alt=""></a>
+								<a href="#"><h2>Iron Man</h2></a>
+								<p>Billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.</p>
+								<ul class="likes-views">
+									<li><a class="likes" href="#">165</a></li>
+									<li><a class="views" href="#">2,350</a></li>
+								</ul>
+							</div>
+						</li>
+
+						<li>
+							<div class="one-fourth descriptions">
+								<a href="#"><img class="thumbnail" src="img/content/movie_4.png" alt=""></a>
+								<a href="#"><h2>Transporter</h2></a>
+								<p>Frank is hired to transport packages for unknown clients and has made a very good living doing so. 
+									But when asked to deliver a package that begins moving, complications arise.</p>
+								<ul class="likes-views">
+									<li><a class="likes" href="#">165</a></li>
+									<li><a class="views" href="#">2,350</a></li>
+								</ul>
+							</div>
+						</li>
+
+						<li>
+							<div class="one-fourth descriptions">
+								<a href="#"><img class="thumbnail" src="img/content/movie_5.png" alt=""></a>
+								<a href="#"><h2>Homefront</h2></a>
+								<p>A former DEA agent moves his family to a quiet town, where he soon tangles with a local meth druglord.</p>
+								<ul class="likes-views">
+									<li><a class="likes" href="#">165</a></li>
+									<li><a class="views" href="#">2,350</a></li>
+								</ul>
+							</div>
+						</li>
+
+						<li>
+							<div class="one-fourth descriptions">
+								<a href="#"><img class="thumbnail" src="img/content/movie_6.png" alt=""></a>
+								<a href="#"><h2>The Hangover</h2></a>
+								<p>Three buddies wake up from a bachelor party in Las Vegas, with no memory of the previous night and the bachelor missing.</p>
+								<ul class="likes-views">
+									<li><a class="likes" href="#">165</a></li>
+									<li><a class="views" href="#">2,350</a></li>
+								</ul>
+							</div>
+						</li>
+
+						<li>
+							<div class="one-fourth descriptions">
+								<a href="#"><img class="thumbnail" src="img/content/movie_7.png" alt=""></a>
+								<a href="#"><h2>Friends with Benefits</h2></a>
+								<p>A young man and woman decide to take their friendship to the next level without becoming a couple, but soon discover 
+									that adding sex only leads to complications.</p>
+								<ul class="likes-views">
+									<li><a class="likes" href="#">165</a></li>
+									<li><a class="views" href="#">2,350</a></li>
+								</ul>
+							</div>
+						</li>
+						
+						<li>
+							<div class="one-fourth descriptions">
+								<a href="#"><img class="thumbnail" src="img/content/movie_8.png" alt=""></a>
+								<a href="#"><h2>My Best Friend's Girl</h2></a>
+								<p>Tank faces the ultimate test of friendship when his best friend hires him to take his ex-girlfriend out 
+									on a lousy date in order to make her realize how great her former boyfriend is.</p>
+								<ul class="likes-views">
+									<li><a class="likes" href="#">165</a></li>
+									<li><a class="views" href="#">2,350</a></li>
+								</ul>
+							</div>
+						</li>
+
+						<li>
+							<div class="one-fourth descriptions">
+								<a href="#"><img class="thumbnail" src="img/content/movie_9.png" alt=""></a>
+								<a href="#"><h2>No Strings Attached</h2></a>
+								<p>A guy and girl try to keep their relationship strictly physical, but it's not long before they learn that they want something more.</p>
+								<ul class="likes-views">
+									<li><a class="likes" href="#">165</a></li>
+									<li><a class="views" href="#">2,350</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+	 
+			<div class="clear-both"><!-- Clear Floats --></div>
+	 
+		</div>
+	</div>
+
+	<div id="content-wrapper">
+		<div class="center-wrapper">
+			<div id="main-posts">
+				<h4>Movie of the Day</h4>
+
+				<div class="main-post">
+					<a href="#"><img src="img/content/main-post_1.png" alt=""></a>
+					<a href="#"><h1>DreamWorks Feels The Need</h1></a>
+					<p>Laos, alongside many of its Southeast Asian neighbours, is well known for producing counterfeit goods of all types, 
+						and with the world going technology crazy in the last few years, Apple products take centre stage 
+						at the local market in the capital city of Vientiane.</p>
+					<p>With the world going technology crazy in the last few years, Apple products take centre stage at the local market 
+						in the capital city of Vientiane.</p>
+					<ul class="likes-views">
+						<li><a class="likes" href="#">165</a></li>
+						<li><a class="views" href="#">2,350</a></li>
+					</ul>
+				</div>
+
+				<div class="main-post">
+					<a href="#"><img src="img/content/main-post_2.png" alt=""></a>
+					<a href="#"><h1>Jurors announced for Tribeca Film Festival</h1></a>
+					<p>Laos, alongside many of its Southeast Asian neighbours, is well known for producing counterfeit goods of all types, 
+						and with the world going technology crazy in the last few years, Apple products take centre stage at the local market 
+						in the capital city of Vientiane.</p>
+					<ul class="likes-views">
+						<li><a class="likes" href="#">165</a></li>
+						<li><a class="views" href="#">2,350</a></li>
+					</ul>
+				</div>
+ 
+				<div class="main-post">
+					<a href="#"><img src="img/content/main-post_3.png" alt=""></a>
+					<a href="#"><h1>Kay Panabaker played Emily Lightman for the pilot episode</h1></a>
+					<p>Laos, alongside many of its Southeast Asian neighbours, is well known for producing counterfeit goods of all types, 
+						and with the world going technology crazy in the last few years, Apple products take centre stage at the local market 
+						in the capital city of Vientiane.</p>
+					<ul class="likes-views">
+						<li><a class="likes" href="#">165</a></li>
+						<li><a class="views" href="#">2,350</a></li>
+					</ul>
+				</div>
+ 
+ 				<div class="main-post">
+					<a href="#"><img src="img/content/main-post_4.png" alt=""></a>
+					<a href="#"><h1>DreamWorks Feels The Need</h1></a>
+					<p>Laos, alongside many of its Southeast Asian neighbours, is well known for producing counterfeit goods of all types, 
+						and with the world going technology crazy in the last few years, Apple products take centre stage 
+						at the local market in the capital city of Vientiane.</p>
+					<p>With the world going technology crazy in the last few years, Apple products take centre stage at the local market 
+						in the capital city of Vientiane.</p>
+					<ul class="likes-views">
+						<li><a class="likes" href="#">165</a></li>
+						<li><a class="views" href="#">2,350</a></li>
+					</ul>
+				</div>
+			</div>
+ 
+			<div id="side-bar">
+				<h4>Latest News</h4>
+ 
+				<div class="sidebar-post">
+					<a class="video-icon" href="#"><img src="img/content/side-post_1.png" alt=""></a>
+					<a href="#"><h3>A Fantastic Fear of Everything</h3></a>
+					<p>Laos, alongside many of its Southeast Asian neighbours, is well known for producing counterfeit goods of all types.</p>
+					<ul class="likes-views">
+						<li><a class="likes" href="#">165</a></li>
+						<li><a class="views" href="#">2,350</a></li>
+					</ul>
+				</div>
+
+				<div class="sidebar-post">
+					<a class="video-icon" href="#"><img src="img/content/side-post_2.png" alt=""></a>
+					<a href="#"><h3>To Rome with Love</h3></a>
+					<p>Laos, alongside many of its Southeast Asian neighbours, is well known for producing counterfeit goods of all types.</p>
+					<ul class="likes-views">
+						<li><a class="likes" href="#">165</a></li>
+						<li><a class="views" href="#">2,350</a></li>
+					</ul>
+				</div>
+ 
+				<div class="sidebar-post">
+					<a class="video-icon" href="#"><img src="img/content/side-post_3.png" alt=""></a>
+					<a href="#"><h3>Loopers</h3></a>
+					<p>Laos, alongside many of its Southeast Asian neighbours, is well known for producing counterfeit goods of all types.</p>
+					<ul class="likes-views">
+						<li><a class="likes" href="#">165</a></li>
+						<li><a class="views" href="#">2,350</a></li>
+					</ul>
+				</div>
+			</div>
+ 
+			<div class="clear-both"><!-- Clear Floats --></div>
+ 
+		</div>
+		
+		<div class="clear-both"><!-- Clear Floats --></div>
+		
+	</div>
+	
+	<div id="footer">
+		<div class="center-wrapper">
+			<div class="one-fifth text-align-center">
+				<a href="index.html"><img src="img/title.png" alt="Movie.com"></a>
+				<hr>
+				<p><em>This is a site about the top movies on TV.</br>— Created by Stanimir Dimitrov &amp; Denis Tihoglo</em></p>
+				<hr>
+			</div>
+	 
+			<div class="one-fifth">
+				<a href="" onclick="return false;"><h3>Movies &amp; TV</h3></a>
+				<ul class="links-list">
+					<li><a href="pages/movies.html">Top Movies</a></li>
+					<li><a href="pages/tv-shows.html">Top TV Shows</a></li>
+					<li><a href="pages/premieres.html">Premieres</a></li>
+				</ul>
+			</div>
+
+			<div class="one-fifth">
+				<a href="" onclick="return false;"><h3>Articles</h3></a>
+				<ul class="links-list">
+					<li><a href="pages/news.html">News</a></li>
+					<li><a href="pages/reviews.html">Reviews</a></li>
+					<li><a href="pages/reports.html">Reports</a></li>
+					<li><a href="pages/interviews.html">Interviews</a></li>
+				</ul>
+			</div>
+
+			<div class="one-fifth">
+				<a href="" onclick="return false;"><h3>Media</h3></a>
+				<ul class="links-list">
+					<li><a href="pages/trailers.html">Trailers</a></li>						
+					<li><a href="pages/pictures.html">Pictures</a></li>
+					<li><a href="pages/videos.html">Videos</a></li>
+				</ul>
+			</div>
+
+			<div class="one-fifth-last">
+				<a href="" onclick="return false;"><h3>Contacts</h3></a>
+				<ul class="social-icons">
+					<li><a href="#"><img src="img/facebook.png" alt="Facebook"></a></li>
+					<li><a href="#"><img src="img/twitter.png" alt="Twitter"></a></li>
+					<li><a href="#"><img src="img/tumblr.png" alt="Tumblr"></a></li>
+					<li><a href="#"><img src="img/google-plus.png" alt="Google+"></a></li>					
+					<li><a href="#"><img src="img/instagram.png" alt="Instagram"></a></li>
+				</ul>
+			</div>
+
+			<div class="clear-both"><!-- Clear Floats --></div>
+			
+		</div>
+	</div>
+</body>
+</html>
