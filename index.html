@@ -1,19 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- Meta Tags -->
 	<meta charset="utf-8">
-
-	<!-- Title -->
 	<title>Movie.com | Home</title>
-
-	<!-- Stylesheets -->
 	<link rel="stylesheet" href="css/style.css" media="screen">
-	
-	<!-- Scripts (jQuery, Carousel Plugin, Functions) -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script src="js/jcarousellite_1.0.1.min.js"></script>
-	<script src="js/myscript.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/loginSignUp.js"></script>
 </head>
 <body>
 	<div id="header-top">
@@ -24,8 +18,8 @@
 				<li><a href="index.html">Home</a></li>
 				<li><a href="" onclick="return false;">Movies &amp; TV</a>
 					<ul class="dropdown">
-						<li><a href="pages/movies.html">Top Movies</a></li>
-						<li><a href="pages/tv-shows.html">Top TV Shows</a></li>
+						<li><a href="pages/top_movies.html">Top Movies</a></li>
+						<li><a href="pages/top_tv-shows.html">Top TV Shows</a></li>
 						<li><a href="pages/premieres.html">Premieres</a></li>
 					</ul>
 				</li>
@@ -61,7 +55,7 @@
 		
 			<div id="Login_tabcontent" class="tabcontent">
 				<form id="login-form" class="modal-content">
-					<div onclick="document.getElementById('my-form').style.display='none'; document.getElementById('login-form').reset();" class="close" title="Close Modal">&times;</div>
+					<div onclick="closePressed(event)" class="close" title="Close Modal">&times;</div>
 					<div class="container">
 						<label><b>Username</b></label>
 						<input type="text" placeholder="Enter Username" name="username" required>
@@ -71,7 +65,7 @@
 		
 						<div>
 							<button type="submit" class="login"><b>Login</b></button>
-							<button type="button" onclick="document.getElementById('my-form').style.display='none'; document.getElementById('login-form').reset();" class="cancel"><b>Cancel</b></button>
+							<button type="button" onclick="closePressed(event)" class="cancel"><b>Cancel</b></button>
 						</div>
 						<input type="checkbox" checked="checked"> Remember me
 					</div>
@@ -80,7 +74,7 @@
 		
 			<div id="SignUp_tabcontent" class="tabcontent">
 				<form id="signup-form" class="modal-content">
-					<div onclick="document.getElementById('my-form').style.display='none'; document.getElementById('Sign up').reset();" class="close" title="Close Modal">&times;</div>
+					<div onclick="closePressed(event)" class="close" title="Close Modal">&times;</div>
 					<div class="container">
 						<label><b>Email</b></label>
 						<input type="text" placeholder="Enter Email" name="email" required>
@@ -94,7 +88,7 @@
 		
 						<div>
 							<button type="submit" class="signup"><b>Sign up</b></button>					
-							<button type="button" onclick="document.getElementById('my-form').style.display='none'; document.getElementById('Sign up').reset();" class="cancel"><b>Cancel</b></button>
+							<button type="button" onclick="closePressed(event);" class="cancel"><b>Cancel</b></button>
 						</div>
 						<input type="checkbox" checked="checked"> Remember me
 					</div>
@@ -167,7 +161,7 @@
 		<div id="featured-movies" class="center-wrapper">
 		
 			<h4>Movies of the Month</h4>
-			<a class="see-all" href="pages/movies.html">See All</a>
+			<a class="see-all" href="pages/top_top_movies.html">See All</a>
 
 			<!-- Prev & Next Buttons -->
 			<a href="" class="mm-prev-button"></a>
@@ -396,8 +390,8 @@
 			<div class="one-fifth">
 				<a href="" onclick="return false;"><h3>Movies &amp; TV</h3></a>
 				<ul class="links-list">
-					<li><a href="pages/movies.html">Top Movies</a></li>
-					<li><a href="pages/tv-shows.html">Top TV Shows</a></li>
+					<li><a href="pages/top_top_movies.html">Top Movies</a></li>
+					<li><a href="pages/top_tv-shows.html">Top TV Shows</a></li>
 					<li><a href="pages/premieres.html">Premieres</a></li>
 				</ul>
 			</div>

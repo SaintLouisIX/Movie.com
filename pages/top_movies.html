@@ -13,7 +13,7 @@
 	<!-- Scripts (jQuery, Carousel Plugin, Functions) -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script src="../js/jcarousellite_1.0.1.min.js"></script>
-	<script src="../js/myscript.js"></script>
+	<script src="../js/loginSignUp.js"></script>
 </head>
 <body>
 	<div id="header-top">
@@ -24,8 +24,8 @@
 				<li><a href="../index.html">Home</a></li>
 				<li><a href="" onclick="return false;">Movies &amp; TV</a>
 					<ul class="dropdown">
-						<li><a href="movies.html">Top Movies</a></li>
-						<li><a href="tv-shows.html">Top TV Shows</a></li>
+						<li><a href="top_movies.html">Top Movies</a></li>
+						<li><a href="top_tv-shows.html">Top TV Shows</a></li>
 						<li><a href="premieres.html">Premieres</a></li>
 					</ul>
 				</li>
@@ -44,7 +44,7 @@
 						<li><a href="videos.html">Videos</a></li>
 					</ul>
 				</li>
-				<li><a href="" onclick="return false;">Login</a></li>
+				<li><a href="" onclick="menuLoginPressed(event)">Login</a></li>
 			</ul>
 			
 			<form id="search-form" action="#">
@@ -206,8 +206,8 @@
 			<div class="one-fifth">
 				<a href="" onclick="return false;"><h3>Movies &amp; TV</h3></a>
 				<ul class="links-list">
-					<li><a href="movies.html">Top Movies</a></li>
-					<li><a href="tv-shows.html">Top TV Shows</a></li>
+					<li><a href="top_movies.html">Top Movies</a></li>
+					<li><a href="top_tv-shows.html">Top TV Shows</a></li>
 					<li><a href="premieres.html">Premieres</a></li>
 				</ul>
 			</div>
@@ -244,6 +244,55 @@
 
 			<div class="clear-both"><!-- Clear Floats --></div>
 			
+		</div>
+	</div>
+	
+	<div id="my-form" class="modal">
+		<div class="tab">
+		  <button id ="Login_tablink" class="tablink" onclick="openTab(event, 'Login_tabcontent')"><b>Login</b></button>
+		  <button id ="SignUp_tablink" class="tablink" onclick="openTab(event, 'SignUp_tabcontent')"><b>Sign up</b></button>
+		</div>
+	
+		<div id="Login_tabcontent" class="tabcontent">
+			<form id="login-form" class="modal-content">
+				<div onclick="document.getElementById('my-form').style.display='none'; document.getElementById('login-form').reset();" class="close" title="Close Modal">&times;</div>
+				<div class="container">
+					<label><b>Username</b></label>
+					<input type="text" placeholder="Enter Username" name="username" required>
+	
+					<label><b>Password</b></label>
+					<input type="password" placeholder="Enter Password" name="password" required>
+	
+					<div>
+						<button type="submit" class="login"><b>Login</b></button>
+						<button type="button" onclick="document.getElementById('my-form').style.display='none'; document.getElementById('login-form').reset();" class="cancel"><b>Cancel</b></button>
+					</div>
+					<input type="checkbox" checked="checked"> Remember me
+				</div>
+			</form>
+		</div>
+	
+		<div id="SignUp_tabcontent" class="tabcontent">
+			<form id="signup-form" class="modal-content">
+				<div onclick="document.getElementById('my-form').style.display='none'; document.getElementById('Sign up').reset();" class="close" title="Close Modal">&times;</div>
+				<div class="container">
+					<label><b>Email</b></label>
+					<input type="text" placeholder="Enter Email" name="email" required>
+	
+					<label><b>Password</b></label>
+					<input type="password" placeholder="Enter Password" name="password" required>
+	
+					<label><b>Repeat Password</b></label>
+					<input type="password" placeholder="Repeat Password" name="password-repeat" required>
+					<input type="checkbox" required> By creating an account you agree to our <a href="#">Terms & Privacy</a>.
+	
+					<div>
+						<button type="submit" class="signup"><b>Sign up</b></button>					
+						<button type="button" onclick="document.getElementById('my-form').style.display='none'; document.getElementById('Sign up').reset();" class="cancel"><b>Cancel</b></button>
+					</div>
+					<input type="checkbox" checked="checked"> Remember me
+				</div>
+			</form>
 		</div>
 	</div>
 </body>
