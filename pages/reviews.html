@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+
+	<!-- Title -->
+	<title>Movie.com | Reviews</title>
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="../css/style.css" media="screen">
+	
+	<!-- Scripts (jQuery, Carousel Plugin, Functions) -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="../js/jcarousellite_1.0.1.min.js"></script>
+	<script src="../js/loginSignUp.js"></script>
+</head>
+<body>
+	<div id="header-top">
+		<div id="top-nav" class="center-wrapper">
+			<a class="title" href="../index.html"><img src="../img/title.png" alt="Movie.com"></a>
+			
+			<ul class="nav">
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="movies.html">Movies &amp; TV</a>
+					<ul class="dropdown">
+						<li><a href="movies.html">Top Movies</a></li>
+						<li><a href="tv-shows.html">Top TV Shows</a></li>
+						<li><a href="premieres.html">Premieres</a></li>
+						<li><a href="actors.html">Actors</a></li>
+					</ul>
+				</li>
+				<li><a href="news.html">Articles</a>
+					<ul class="dropdown">
+						<li><a href="news.html">News</a></li>
+						<li><a href="reviews.html">Reviews</a></li>
+						<li><a href="reports.html">Reports</a></li>
+						<li><a href="interviews.html">Interviews</a></li>
+					</ul>
+				</li>
+				<li><a href="trailers.html">Media</a>
+					<ul class="dropdown">
+						<li><a href="trailers.html">Trailers</a></li>						
+						<li><a href="pictures.html">Pictures</a></li>
+						<li><a href="videos.html">Videos</a></li>
+					</ul>
+				</li>
+				<li><a href="" onclick="menuLoginPressed(event)">Login</a></li>
+			</ul>
+			
+			<form id="search-form" action="#">
+				<input type="text" id="search-box" name="search-box" placeholder="Search Box">
+				<input type="submit" value="" id="search-submit">
+			</form>
+		</div>
+		
+		<div id="my-form" class="modal">
+			<div class="tab">
+			  <button id="Login_tablink" class="tablink" onclick="openTab(event, 'Login_tabcontent')"><b>Login</b></button>
+			  <button id="SignUp_tablink" class="tablink" onclick="openTab(event, 'SignUp_tabcontent')"><b>Sign up</b></button>
+			</div>
+		
+			<div id="Login_tabcontent" class="tab-content">
+				<form id="login-form" class="modal-content">
+					<div onclick="closePressed(event)" class="close" title="Close Modal">&times;</div>
+					<div class="container">
+						<label for="login-username"><b>Username</b></label>
+						<input id="login-username" type="text" placeholder="Enter Username" name="username" required>
+		
+						<label for="login-password"><b>Password</b></label>
+						<input id="login-password" type="password" placeholder="Enter Password" name="password" required>
+		
+						<input id="login-remember" type="checkbox" checked="checked">
+						<label for="login-remember">Remember me</label>
+						
+						<div>
+							<button type="submit" class="login" onclick="location.href='../index2.html';"><b>Login</b></button>
+							<button type="button" onclick="closePressed(event)" class="cancel"><b>Cancel</b></button>
+						</div>
+
+						<div class="clear-both"><!-- Clear Floats --></div>
+					</div>
+				</form>
+			</div>
+		
+			<div id="SignUp_tabcontent" class="tab-content">
+				<form id="signup-form" class="modal-content">
+					<div onclick="closePressed(event)" class="close" title="Close Modal">&times;</div>
+					<div class="container">
+						<label for="signup-email"><b>Email</b></label>
+						<input id="signup-email" type="text" placeholder="Enter Email" name="email" required>
+		
+						<label for="signup-password"><b>Password</b></label>
+						<input id="signup-password" type="password" placeholder="Enter Password" name="password" required>
+		
+						<label for="signup-repeat-password"><b>Repeat Password</b></label>
+						<input id="signup-repeat-password" type="password" placeholder="Repeat Password" name="password-repeat" required>
+						
+						<input id="signup-terms" type="checkbox" required>
+						<label for="signup-terms">By creating an account you agree to our <a href="#">Terms & Privacy</a>.</label>
+						<div class="clear-both"><!-- Clear Floats --></div>
+		
+						<input id="signup-remember" type="checkbox" checked="checked">
+						<label for="signup-remember">Remember me</label>
+						
+						<div>
+							<button type="submit" class="signup" onclick="location.href='../index2.html';"><b>Sign up</b></button>
+							<button type="button" onclick="closePressed(event);" class="cancel"><b>Cancel</b></button>
+						</div>
+						
+						<div class="clear-both"><!-- Clear Floats --></div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="content-wrapper">
+		<div class="extra-margin"><!-- Add Extra Margin --></div>
+		<div class="center-wrapper">
+			<h4>Reviews</h4>
+
+			<div class="main-post-box">
+				<div class="float-left">
+					<a href="articles/reviews/review-1.html"><img src="../img/content/metallica.png" alt=""></a>
+					<ul class="likes-views">
+						<li class="likes">16,550</li>
+						<li class="views">235,500</li>
+					</ul>
+				</div>
+				<div class="main-post-box-content">
+					<a href="articles/reviews/review-1.html"><h1>Harry Potter and the Philosopher's Stone</h1></a>
+					<p class="float-right"><b>Rating:</b> <span>9.0</span>/10</p>
+					<p><b>Release Date:</b> 11 June 2004 (USA)</p>
+					<p><b>Director:</b> David Twohy</p>
+					<p class="main-actors"><b>Actors:</b> Vin Diesel, Judi Dench, Colm Feore</p>
+					<p>Mr. Dursley was the director of a firm called Grunnings, which made drills. He was a big, beefy man with hardly any neck, 
+						although he did have a very large mustache. Mrs. Dursley was thin and blonde and had nearly twice the usual amount of neck, 
+						which came in very useful as she spent so much of her time craning over garden fences, spying on the neighbors. The Dursleys 
+						had a small son called Dudley and in their opinion there was no finer boy anywhere.</p>
+					<a class="float-right more-info" href="articles/reviews/review-1.html">&raquo; More Info</a>
+				</div>
+			</div>
+			
+			<div class="main-post-box">
+				<div class="float-left">
+					<a href="articles/reviews/review-1.html"><img src="../img/content/metallica.png" alt=""></a>
+					<ul class="likes-views">
+						<li class="likes">16,550</li>
+						<li class="views">235,500</li>
+					</ul>
+				</div>
+				<div class="main-post-box-content">
+					<a href="articles/reviews/review-1.html"><h1>Harry Potter and the Philosopher's Stone</h1></a>
+					<p class="float-right"><b>Rating:</b> <span>9.0</span>/10</p>
+					<p><b>Release Date:</b> 11 June 2004 (USA)</p>
+					<p><b>Director:</b> David Twohy</p>
+					<p class="main-actors"><b>Actors:</b> Vin Diesel, Judi Dench, Colm Feore</p>
+					<p>Mr. Dursley was the director of a firm called Grunnings, which made drills. He was a big, beefy man with hardly any neck, 
+						although he did have a very large mustache. Mrs. Dursley was thin and blonde and had nearly twice the usual amount of neck, 
+						which came in very useful as she spent so much of her time craning over garden fences, spying on the neighbors. The Dursleys 
+						had a small son called Dudley and in their opinion there was no finer boy anywhere.</p>
+					<a class="float-right more-info" href="articles/reviews/review-1.html">&raquo; More Info</a>
+				</div>
+			</div>
+			
+			<div class="main-post-box">
+				<div class="float-left">
+					<a href="articles/reviews/review-1.html"><img src="../img/content/metallica.png" alt=""></a>
+					<ul class="likes-views">
+						<li class="likes">16,550</li>
+						<li class="views">235,500</li>
+					</ul>
+				</div>
+				<div class="main-post-box-content">
+					<a href="articles/reviews/review-1.html"><h1>Harry Potter and the Philosopher's Stone</h1></a>
+					<p class="float-right"><b>Rating:</b> <span>9.0</span>/10</p>
+					<p><b>Release Date:</b> 11 June 2004 (USA)</p>
+					<p><b>Director:</b> David Twohy</p>
+					<p class="main-actors"><b>Actors:</b> Vin Diesel, Judi Dench, Colm Feore</p>
+					<p>Mr. Dursley was the director of a firm called Grunnings, which made drills. He was a big, beefy man with hardly any neck, 
+						although he did have a very large mustache. Mrs. Dursley was thin and blonde and had nearly twice the usual amount of neck, 
+						which came in very useful as she spent so much of her time craning over garden fences, spying on the neighbors. The Dursleys 
+						had a small son called Dudley and in their opinion there was no finer boy anywhere.</p>
+					<a class="float-right more-info" href="articles/reviews/review-1.html">&raquo; More Info</a>
+				</div>
+			</div>
+			
+			<div class="main-post-box">
+				<div class="float-left">
+					<a href="articles/reviews/review-1.html"><img src="../img/content/metallica.png" alt=""></a>
+					<ul class="likes-views">
+						<li class="likes">16,550</li>
+						<li class="views">235,500</li>
+					</ul>
+				</div>
+				<div class="main-post-box-content">
+					<a href="articles/reviews/review-1.html"><h1>Harry Potter and the Philosopher's Stone</h1></a>
+					<p class="float-right"><b>Rating:</b> <span>9.0</span>/10</p>
+					<p><b>Release Date:</b> 11 June 2004 (USA)</p>
+					<p><b>Director:</b> David Twohy</p>
+					<p class="main-actors"><b>Actors:</b> Vin Diesel, Judi Dench, Colm Feore</p>
+					<p>Mr. Dursley was the director of a firm called Grunnings, which made drills. He was a big, beefy man with hardly any neck, 
+						although he did have a very large mustache. Mrs. Dursley was thin and blonde and had nearly twice the usual amount of neck, 
+						which came in very useful as she spent so much of her time craning over garden fences, spying on the neighbors. The Dursleys 
+						had a small son called Dudley and in their opinion there was no finer boy anywhere.</p>
+					<a class="float-right more-info" href="articles/reviews/review-1.html">&raquo; More Info</a>
+				</div>
+			</div>
+			
+			<div class="main-post-box">
+				<div class="float-left">
+					<a href="articles/reviews/review-1.html"><img src="../img/content/metallica.png" alt=""></a>
+					<ul class="likes-views">
+						<li class="likes">16,550</li>
+						<li class="views">235,500</li>
+					</ul>
+				</div>
+				<div class="main-post-box-content">
+					<a href="articles/reviews/review-1.html"><h1>Harry Potter and the Philosopher's Stone</h1></a>
+					<p class="float-right"><b>Rating:</b> <span>9.0</span>/10</p>
+					<p><b>Release Date:</b> 11 June 2004 (USA)</p>
+					<p><b>Director:</b> David Twohy</p>
+					<p class="main-actors"><b>Actors:</b> Vin Diesel, Judi Dench, Colm Feore</p>
+					<p>Mr. Dursley was the director of a firm called Grunnings, which made drills. He was a big, beefy man with hardly any neck, 
+						although he did have a very large mustache. Mrs. Dursley was thin and blonde and had nearly twice the usual amount of neck, 
+						which came in very useful as she spent so much of her time craning over garden fences, spying on the neighbors. The Dursleys 
+						had a small son called Dudley and in their opinion there was no finer boy anywhere.</p>
+					<a class="float-right more-info" href="articles/reviews/review-1.html">&raquo; More Info</a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="clear-both"><!-- Clear Floats --></div>
+		
+	</div>
+	
+	<div id="footer">
+		<div class="center-wrapper">
+			<div class="one-fifth text-align-center">
+				<a href="../index.html"><img src="../img/title.png" alt="Movie.com"></a>
+				<hr>
+				<p><em>This is a site about the top movies on TV.</br>— Created by Stanimir Dimitrov &amp; Denis Tihoglo</em></p>
+				<hr>
+			</div>
+	 
+			<div class="one-fifth">
+				<a href="movies.html"><h3>Movies &amp; TV</h3></a>
+				<ul class="links-list">
+					<li><a href="movies.html">Top Movies</a></li>
+					<li><a href="tv-shows.html">Top TV Shows</a></li>
+					<li><a href="premieres.html">Premieres</a></li>
+					<li><a href="actors.html">Actors</a></li>
+				</ul>
+			</div>
+
+			<div class="one-fifth">
+				<a href="news.html"><h3>Articles</h3></a>
+				<ul class="links-list">
+					<li><a href="news.html">News</a></li>
+					<li><a href="reviews.html">Reviews</a></li>
+					<li><a href="reports.html">Reports</a></li>
+					<li><a href="interviews.html">Interviews</a></li>
+				</ul>
+			</div>
+
+			<div class="one-fifth">
+				<a href="trailers.html"><h3>Media</h3></a>
+				<ul class="links-list">
+					<li><a href="trailers.html">Trailers</a></li>						
+					<li><a href="pictures.html">Pictures</a></li>
+					<li><a href="videos.html">Videos</a></li>
+				</ul>
+			</div>
+
+			<div class="one-fifth-last">
+				<a href="" onclick="return false;"><h3>Contacts</h3></a>
+				<ul class="social-icons">
+					<li><a href="#"><img src="../img/facebook.png" alt="Facebook"></a></li>
+					<li><a href="#"><img src="../img/twitter.png" alt="Twitter"></a></li>
+					<li><a href="#"><img src="../img/tumblr.png" alt="Tumblr"></a></li>
+					<li><a href="#"><img src="../img/google-plus.png" alt="Google+"></a></li>					
+					<li><a href="#"><img src="../img/instagram.png" alt="Instagram"></a></li>
+				</ul>
+			</div>
+
+			<div class="clear-both"><!-- Clear Floats --></div>
+			
+		</div>
+	</div>
+</body>
+</html>

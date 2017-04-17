@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+
+	<!-- Title -->
+	<title>Movie.com | Premiere</title>
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="../../../css/style.css" media="screen">
+	
+	<!-- Scripts (jQuery, Carousel Plugin, Functions) -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="../../../js/jcarousellite_1.0.1.min.js"></script>
+	<script src="../../../js/loginSignUp.js"></script>
+	<script src="../../../js/movieRating.js"></script>
+</head>
+<body>
+	<div id="header-top">
+		<div id="top-nav" class="center-wrapper">
+			<a class="title" href="../../../index.html"><img src="../../../img/title.png" alt="Movie.com"></a>
+			
+			<ul class="nav">
+				<li><a href="../../../index.html">Home</a></li>
+				<li><a href="../../movies.html">Movies &amp; TV</a>
+					<ul class="dropdown">
+						<li><a href="../../movies.html">Top Movies</a></li>
+						<li><a href="../../tv-shows.html">Top TV Shows</a></li>
+						<li><a href="../../premieres.html">Premieres</a></li>
+						<li><a href="../../actors.html">Actors</a></li>
+					</ul>
+				</li>
+				<li><a href="../../news.html">Articles</a>
+					<ul class="dropdown">
+						<li><a href="../../news.html">News</a></li>
+						<li><a href="../../reviews.html">Reviews</a></li>
+						<li><a href="../../reports.html">Reports</a></li>
+						<li><a href="../../interviews.html">Interviews</a></li>
+					</ul>
+				</li>
+				<li><a href="../../trailers.html">Media</a>
+					<ul class="dropdown">
+						<li><a href="../../trailers.html">Trailers</a></li>						
+						<li><a href="../../pictures.html">Pictures</a></li>
+						<li><a href="../../videos.html">Videos</a></li>
+					</ul>
+				</li>
+				<li><a href="" onclick="menuLoginPressed(event)">Login</a></li>
+			</ul>
+			
+			<form id="search-form" action="#">
+				<input type="text" id="search-box" name="search-box" placeholder="Search Box">
+				<input type="submit" value="" id="search-submit">
+			</form>
+		</div>
+		
+		<div id="my-form" class="modal">
+			<div class="tab">
+			  <button id="Login_tablink" class="tablink" onclick="openTab(event, 'Login_tabcontent')"><b>Login</b></button>
+			  <button id="SignUp_tablink" class="tablink" onclick="openTab(event, 'SignUp_tabcontent')"><b>Sign up</b></button>
+			</div>
+		
+			<div id="Login_tabcontent" class="tab-content">
+				<form id="login-form" class="modal-content">
+					<div onclick="closePressed(event)" class="close" title="Close Modal">&times;</div>
+					<div class="container">
+						<label for="login-username"><b>Username</b></label>
+						<input id="login-username" type="text" placeholder="Enter Username" name="username" required>
+		
+						<label for="login-password"><b>Password</b></label>
+						<input id="login-password" type="password" placeholder="Enter Password" name="password" required>
+		
+						<input id="login-remember" type="checkbox" checked="checked">
+						<label for="login-remember">Remember me</label>
+						
+						<div>
+							<button type="submit" class="login" onclick="location.href='index2.html';"><b>Login</b></button>
+							<button type="button" onclick="closePressed(event)" class="cancel"><b>Cancel</b></button>
+						</div>
+
+						<div class="clear-both"><!-- Clear Floats --></div>
+					</div>
+				</form>
+			</div>
+		
+			<div id="SignUp_tabcontent" class="tab-content">
+				<form id="signup-form" class="modal-content">
+					<div onclick="closePressed(event)" class="close" title="Close Modal">&times;</div>
+					<div class="container">
+						<label for="signup-email"><b>Email</b></label>
+						<input id="signup-email" type="text" placeholder="Enter Email" name="email" required>
+		
+						<label for="signup-password"><b>Password</b></label>
+						<input id="signup-password" type="password" placeholder="Enter Password" name="password" required>
+		
+						<label for="signup-repeat-password"><b>Repeat Password</b></label>
+						<input id="signup-repeat-password" type="password" placeholder="Repeat Password" name="password-repeat" required>
+						
+						<input id="signup-terms" type="checkbox" required>
+						<label for="signup-terms">By creating an account you agree to our <a href="#">Terms & Privacy</a>.</label>
+						<div class="clear-both"><!-- Clear Floats --></div>
+		
+						<input id="signup-remember" type="checkbox" checked="checked">
+						<label for="signup-remember">Remember me</label>
+						
+						<div>
+							<button type="submit" class="signup"><b>Sign up</b></button>
+							<button type="button" onclick="closePressed(event);" class="cancel"><b>Cancel</b></button>
+						</div>
+						
+						<div class="clear-both"><!-- Clear Floats --></div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+		
+	<div id="content-wrapper">
+		<div id="featured-movies" class="center-wrapper">
+			<div class="main-post-box">
+				<div class="float-left">
+					<img class="movie-image" src="../../../img/content/main_movie.png" alt="">
+					<ul class="likes-views">
+						<li class="likes">160,550</li>
+						<li class="views">2,350,500</li>
+					</ul>
+				</div>
+				
+				<div class="movie-details">
+					<h1>The Chronicles of Riddick</h1>
+					<p><b>Country:</b> USA</p>
+					<p><b>Language:</b> English</p>
+					<p><b>Release Date:</b> 11 June 2004</p>
+					<p><b>Director:</b> David Twohy</p>
+					<p><b>Writers:</b> Jim Wheat, Ken Wheat, David Twohy</p>
+					<p><b>Producers:</b> Vin Diesel, Scott Kroopf, Kamil Braun</p>
+					<p><b>Actors:</b> Vin Diesel, Judi Dench, Colm Feore, <a class="more-info" href="#">See more &raquo;</a></p>
+					<p><b>Genres:</b> Action, Adventure, Sci-Fi, Thriller</p>
+					<p><b>Production Studio:</b> Universal Pictures, Radar Pictures, One Race Productions</p>
+					<p><b>Sound:</b>  DTS, Dolby Digital, SDDS</p>
+					<p><b>Runtime:</b> 119 min | 134 min (director's cut)</p>
+					<p><b>Budget:</b> $105,000,000</p>
+					<p><b>Opening Weekend:</b> $24,289,165 (USA)</p>
+					<p><b>Total:</b> $57,637,485 (USA) | $115 366 752 (world wide)</p>
+				</div>
+			</div>
+			
+			<ul id="movie-tabs">
+				<li><a href="#">Actors</a></li>
+				<li><a href="#">Videos</a></li>
+				<li><a href="#">Pictures</a></li>
+				<li><a href="#">Articles</a></li>
+			</ul>
+			
+			<div>
+				<h4>Storyline</h4>
+				<p>Five years ago... Escaped convict Richard B. Riddick escaped from a desert planet with his two companions, 
+					religious man Imam and runaway teenage girl Jack. After five years wandering across the outskirts of the galaxy 
+					and being hunted by bounty hunters calming the bounty on his head, Riddick arrives on the colonized planet New Mecca, 
+					he learns Imam placed the bounty on his head and Jack has been imprisoned on the prison planet "Crematoria" for murder. 
+					Riddick learns from Aereon, ambassador of the Elemental race is seeking out Furians, a race of warriors in a bid 
+					to balance the universe, as a warrior army known as The Necromongers led by the evil undead Lord Marshal are invading 
+					every planet in the galaxy and cleansing all of humanity in their goal for universal conquest. Believing Riddick is a 
+					Furian warrior, Aereon decides to hire Riddick believing he is the one man who can stop The Lord Marshal and the 
+					Necromongers. When the Necromongers attacks New Mecca, Riddick is captured by cocky bounty hunter Toombs and his crew 
+					and he is transported to Crematoria, where he reunites with Jack now named 'Kyra', where Riddick and Kyra escapes to the 
+					planet's sun ravaged surface, where Riddick helped by Necromonger warrior Vakko and his sexy wife Dame Vakko, sets out to 
+					defeat the Lord Marshal and save the universe from the Lord Marshal's rule and save the rest of humanity from being 
+					converted into Nercomonger warriors.</p>
+			</div>
+			
+			<div class="main-movie-rating">
+				<h4>Rating</h4>
+				<ul class="movie-rating">
+					<li class="rated"></li>
+					<li class="rated"></li>
+					<li class="rated"></li>
+					<li class="rated"></li>
+					<li></li>
+				</ul>
+				<div class="clear-both"><!-- Clear Floats --></div>
+			</div>
+			
+			<div class="gallery">
+				<h4>Trailer</h4>
+				<div class="preview" align="center">
+					<iframe name="preview" src="https://www.youtube.com/embed/LCrDo3eCXkw" allowfullscreen></iframe>
+				</div>
+			</div>
+			
+			<div class="user-reviews">
+				<h4>User Reviews</h4>
+				<div class="main-post-box positive">
+					<div class="float-left profile-image"><a href="#"><img src="../../../img/content/metallica.png" alt=""></a></div>
+					<div>
+						<a href="#"><h1>User_0102</h1></a>
+						<p class="float-right"><b>Date:</b> 12.01.2016</p>
+						<h4>Title</h4>
+						<div class="clear-both"></div>
+						<p>It was very refreshing to watch a science fiction movie with a great story and fantastic acting. 
+							I enjoyed Vin Diesel's performance as Riddick. He made the movie with his one-liners. Casting was 
+							very good. Special effects were incredible. I would give it 9 out of 10 stars. I hope there is a 
+							sequel to follow this movie. There appeared to be a time span between Pitch Black and Chronicles of 
+							Riddick but they bridged the gap quite well. A prequel to Pitch Black would help to establish who 
+							Riddick is and where he came from. This movie definitely took me to a place few science fiction movies 
+							do now days. I predict that Riddick will be entertaining us with more movies in the future.</p>
+					</div>
+				</div>
+				
+				<div class="main-post-box positive">
+					<div class="float-left profile-image"><a href="#"><img src="../../../img/content/metallica.png" alt=""></a></div>
+					<div>
+						<a href="#"><h1>User_3393</h1></a>
+						<p class="float-right"><b>Date:</b> 12.01.2016</p>
+						<h4>Title</h4>
+						<div class="clear-both"></div>
+						<p>Just had fun watching TCOR and am pretty happy about it. Good action, great visual stuff. A worthy 
+							successor to Pitch Black, though the two films are hardly related. Vin Diesel does a good and convincing 
+							job at playing an action antihero. As usual, Judy Dench adds to the film, even though her role is small 
+							here. The story is pure pulp SF and is short and predictable but is refreshingly dark and (mostly) 
+							unsentimental. It actually also has some interesting bits and nice side stories as a (smallish) bonus. 
+							Bits and pieces have been copied from Dune, without the film being a Dune copy. Compared to Dune, TCOR 
+							has more action and fewer Lynch oddities & boring bits. In my book, both films are good, about equally so.</p>
+					</div>
+				</div>
+				
+				<div class="main-post-box negative">
+					<div class="float-left profile-image"><a href="#"><img src="../../../img/content/metallica.png" alt=""></a></div>
+					<div>
+						<a href="#"><h1>User_5680</h1></a>
+						<p class="float-right"><b>Date:</b> 12.01.2016</p>
+						<h4>Title</h4>
+						<div class="clear-both"></div>
+						<p>Reading some of the other reviews, it seems that people are fairly polarized in their opinions of this film. 
+							Like most pulp science fiction, it takes a different sort of suspension of belief from that which makes usual 
+							films work. However, the action makes it a fair bit easier, and I found it a lot more engrossing and convincing 
+							than any of the five (ridiculous but entertaining) Star Wars films, the uniformly unwatchable Star Trek stuff, 
+							or, for that matter, most blockbusting light entertainments. But that is just me. If you hate Dune, exaggerated 
+							action scenes, or (minor) plot inconsistencies, then you probably won't like this film.</p>
+					</div>
+				</div>
+				
+				<div class="main-post-box positive">
+					<div class="float-left profile-image"><a href="#"><img src="../../../img/content/metallica.png" alt=""></a></div>
+					<div>
+						<a href="#"><h1>User_3393</h1></a>
+						<p class="float-right"><b>Date:</b> 12.01.2016</p>
+						<h4>Title</h4>
+						<div class="clear-both"></div>
+						<p>It was very refreshing to watch a science fiction movie with a great story and fantastic acting. 
+							I enjoyed Vin Diesel's performance as Riddick. He made the movie with his one-liners. Casting was 
+							very good. Special effects were incredible. I would give it 9 out of 10 stars. I hope there is a 
+							sequel to follow this movie. There appeared to be a time span between Pitch Black and Chronicles of 
+							Riddick but they bridged the gap quite well. A prequel to Pitch Black would help to establish who 
+							Riddick is and where he came from. This movie definitely took me to a place few science fiction movies 
+							do now days. I predict that Riddick will be entertaining us with more movies in the future.</p>
+					</div>
+				</div>
+			</div>
+			
+			<div>
+				<h4>Write Review</h4>
+				<p>In order to write a review you need to log in to your account or create a new account.</p>
+				<div class="user-review-form">
+					<form>
+						<p><b>Review Type:</b></p>
+						<input type="text" placeholder="Your title..." required>
+						<p><b>Review Type:</b></p>
+						<textarea placeholder="Your review..." required></textarea>
+						<p><b>Review Type:</b></p>
+						<select>
+							<option value="positive">Positive</option>
+							<option value="negative">Negative</option>
+						</select>
+						<input type="submit" value="Submit">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="footer">
+		<div class="center-wrapper">
+			<div class="one-fifth text-align-center">
+				<a href="../../../index.html"><img src="../../../img/title.png" alt="Movie.com"></a>
+				<hr>
+				<p><em>This is a site about the top movies on TV.<br>— Created by Stanimir Dimitrov &amp; Denis Tihoglo</em></p>
+				<hr>
+			</div>
+	 
+			<div class="one-fifth">
+				<a href="../../movies.html"><h3>Movies &amp; TV</h3></a>
+				<ul class="links-list">
+					<li><a href="../../movies.html">Top Movies</a></li>
+					<li><a href="../../tv-shows.html">Top TV Shows</a></li>
+					<li><a href="../../premieres.html">Premieres</a></li>
+					<li><a href="../../actors.html">Actors</a></li>
+				</ul>
+			</div>
+
+			<div class="one-fifth">
+				<a href="../../news.html"><h3>Articles</h3></a>
+				<ul class="links-list">
+					<li><a href="../../news.html">News</a></li>
+					<li><a href="../../reviews.html">Reviews</a></li>
+					<li><a href="../../reports.html">Reports</a></li>
+					<li><a href="../../interviews.html">Interviews</a></li>
+				</ul>
+			</div>
+
+			<div class="one-fifth">
+				<a href="../../trailers.html"><h3>Media</h3></a>
+				<ul class="links-list">
+					<li><a href="../../trailers.html">Trailers</a></li>						
+					<li><a href="../../pictures.html">Pictures</a></li>
+					<li><a href="../../videos.html">Videos</a></li>
+				</ul>
+			</div>
+
+			<div class="one-fifth-last">
+				<a href="" onclick="return false;"><h3>Contacts</h3></a>
+				<ul class="social-icons">
+					<li><a href="#"><img src="../../../img/facebook.png" alt="Facebook"></a></li>
+					<li><a href="#"><img src="../../../img/twitter.png" alt="Twitter"></a></li>
+					<li><a href="#"><img src="../../../img/tumblr.png" alt="Tumblr"></a></li>
+					<li><a href="#"><img src="../../../img/google-plus.png" alt="Google+"></a></li>					
+					<li><a href="#"><img src="../../../img/instagram.png" alt="Instagram"></a></li>
+				</ul>
+			</div>
+
+			<div class="clear-both"><!-- Clear Floats --></div>
+			
+		</div>
+	</div>
+</body>
+</html>

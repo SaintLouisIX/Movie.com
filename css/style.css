@@ -169,7 +169,7 @@ table {border-collapse: collapse; border-spacing: 0;} body {cursor: default;} st
 #header-featured-movie .movie-rating {
    position: absolute;
    top: 405px;
-   left: 135px;
+   left: 180px;
 }
  
 #header-featured-movie .movie-rating li {
@@ -318,7 +318,7 @@ body {
 /* Featured Movies Slider */
 #featured-movies-slider-wrapper {
    width: 870px;
-   height: 260px;
+   height: 290px;
    overflow: hidden;
 }
 
@@ -385,8 +385,6 @@ body {
 	display: block;
    height: 50px;
    overflow: hidden;
-   /* white-space: nowrap;   
-   text-overflow: ellipsis; */
 }
 
 #featured-movies ul {margin-top: 20px;}
@@ -397,30 +395,35 @@ body {
 .likes-views {display: block;}
  
 .likes-views li {
-   display: block;
-   float: left;
-   padding-left: 5px;
+	display: block;
+	font-weight: bold;
+   font-size: 11px;
+   color: #979797;
+}
+
+.likes-views li:hover {
+	opacity: 0.8;
+}
+
+.main-post .likes-views li, .sidebar-post .likes-views li {
+   float: left !important;
    padding-right: 25px;
 }
 
-.likes-views li:last-child {
+.main-post .likes-views li:last-child, .sidebar-post .likes-views li:last-child {
    padding-right: 0;
 }
  
-.likes-views li a.likes {
+.likes-views li.likes {
    padding-left: 15px;
    background: url(../img/likes.png) no-repeat 0 2px;
+   float: left;
 }
  
-.likes-views li a.views {
+.likes-views li.views {
    padding-left: 20px;
-   background: url(../img/views.png) no-repeat 0 2px;
-}
- 
-.likes-views li a {
-   font-weight: bold;
-   font-size: 11px;
-   color: #979797;
+   background: url(../img/views.png) no-repeat 0 1px;
+   float: right;
 }
 
 /* ############################################## */
@@ -435,7 +438,7 @@ body {
 #content-wrapper .main-post,
 #content-wrapper .sidebar-post {padding-bottom: 40px;}
 
-#content-wrapper img {margin-top: 25px;}
+#content-wrapper img {margin: 25px 0 0 0;}
 
 #content-wrapper .main-post img {width: 565px;}
 #content-wrapper .sidebar-post img {width: 255px;}
@@ -446,10 +449,10 @@ body {
    position: relative;
    overflow: hidden;
    padding-bottom: 15px;
-   margin-top: 20px;
-   margin-bottom: 20px;
+   margin: 20px 0;
 	background: #f6f6f6;
-	border: 1px solid #999999;
+	border: 1px solid #cccccc;
+	border-radius: 6px;
 }
  
 #content-wrapper .main-post-box div {
@@ -460,8 +463,42 @@ body {
 #content-wrapper .main-post-box img {
    width: 120px;
    height: 140px;
-   border: 3px solid #999999;
+   border: 2px solid #cccccc;
+   margin: 0 0 10px 0;
+}
+
+#content-wrapper .main-post-box .movie-image {
+   width: 230px;
+   height: 320px;
    margin: 0;
+}
+
+#content-wrapper .main-post-box .movie-details {
+   margin-left: 262px;
+}
+
+#content-wrapper .main-post-box .main-post-box-content {
+   margin-left: 150px;
+}
+
+#content-wrapper .more-info {
+	font-size: 13px;
+	line-height: 18px;
+	color: #5293c2;
+}
+
+#content-wrapper .article img {
+   max-width: 320px;
+   max-height: 300px;
+   margin: 10px 30px;
+}
+
+#content-wrapper .article .float-left img {
+   margin-left: 0;
+}
+
+#content-wrapper .article .float-right img {
+   margin-right: 0;
 }
 
 /* Main & Sidebar Posts Titles */
@@ -470,9 +507,10 @@ body {
    font-size: 20px;
    line-height: 28px;
    text-align: left;
+   margin-top: 10px;
    color: #5293c2;
 }
- 
+
 /* Main & Sidebar Paragraph */
 #content-wrapper p {
    font-size: 13px;
@@ -480,9 +518,9 @@ body {
    color: #7c7e85;
 }
 
+/* Add ellipsis in the end of the row if it overflows */
 #content-wrapper .main-post-box .main-actors {
 	display: block;
-   width: 260px;
    overflow: hidden;
    white-space: nowrap;   
    text-overflow: ellipsis;
@@ -495,11 +533,49 @@ body {
 	text-transform: uppercase;
 	text-align: left;
    line-height: 18px;
+   margin: 0;
    color: #5293c2;
 }
 
 #content-wrapper .main-post-box h4 {
    font-size: 16px;
+}
+
+/* Rating */
+/* Movie Rating */
+.movie-rating {
+	
+}
+
+.movie-rating li {
+   display: block;
+   float: left;
+   cursor: pointer;
+   width: 18px;
+   height: 18px;
+   background: url(../img/star-icon.png) no-repeat 0 0;
+}
+
+.movie-rating li::after {
+	clear: both;
+}
+ 
+.movie-rating li.rated {background-position: 0 -18px;}
+
+.main-movie-rating .movie-rating li {margin-bottom: 10px !important}
+
+#featured-movies .movie-rating {
+	margin-top: 14px !important;
+	margin-left: 35px;
+}
+
+#featured-movies .movie-rating span {	
+	display: block;
+	font-weight: bold;
+	margin-right: 35px;
+   font-size: 12px;
+   line-height: 18px;
+   color: #000000;
 }
 
 /* Images Video Icons */
@@ -518,9 +594,10 @@ body {
  
 #side-bar .video-icon:before {bottom: 25px;}
 
-/* Float Left & Right */
+/* Float Left, Right & Center */
 .float-left {float: left;}
 .float-right {float: right;}
+.float-center {text-align: center;}
 
 /* Clear Floats */
 .clear-both {clear: both;}
@@ -579,6 +656,14 @@ a:hover {opacity: 0.8;}
    width: 28px;
    height: 28px;
 }
+
+/* Default User Icon (when logged in) */
+#profile-image {
+	height: 20px;
+	width: 20px;
+	margin-top: 2px;
+	float: left;
+}
  
 /* Text Align Center */
 .text-align-center {text-align: center;}
@@ -588,7 +673,7 @@ em {font-style: italic;}
  
 /* Align Center */
 .align-center {margin: 0 auto;}
- 
+
 /* Horizontal Line */
 hr {
    border: none;
@@ -646,12 +731,155 @@ hr {
 
 
 /* Themes */
-.light {
-	background: #efefef !important;
+.light {background: #efefef !important;}
+.dark {background: #181818 !important;}
+
+/* Individual Movies Tabs & Genres */
+#movie-tabs, #side-bar .genres {
+	display: table;
+	table-layout: fixed;
+	text-align: center;
+	padding-bottom: 15px;
+	width: 100%;
 }
 
-.dark {
-	background: #181818 !important;
+#side-bar .genres {
+	margin: 20px 0;
+	text-align: left;
+}
+
+#movie-tabs li {
+	display: table-cell;
+	width: 25%;
+	padding-right: 1px;
+	vertical-align: bottom;
+}
+
+#side-bar .genres li {
+	width: 25px;
+	height: 25px;
+}
+
+#movie-tabs a {
+	display: block;
+	padding: 4px 10px;
+	background-color: #222222;
+	color: #ffffff;
+	border-radius: 6px;
+}
+
+#side-bar .genres a {
+	display: block;
+	padding: 4px 30px;
+	color: #5293c2;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+/* Genres Icons */
+.genres li.action {background: url(../img/movie-genres.png) no-repeat 0 0;}
+.genres li.adventure {background: url(../img/movie-genres.png) no-repeat -25px 0;}
+.genres li.animation {background: url(../img/movie-genres.png) no-repeat -50px 0;}
+.genres li.comedy {background: url(../img/movie-genres.png) no-repeat -75px 0;}
+.genres li.crime {background: url(../img/movie-genres.png) no-repeat -100px 0;}
+.genres li.drama {background: url(../img/movie-genres.png) no-repeat -125px 0;}
+.genres li.fantasy {background: url(../img/movie-genres.png) no-repeat -150px 0;}
+.genres li.history {background: url(../img/movie-genres.png) no-repeat -175px 0;}
+.genres li.horror {background: url(../img/movie-genres.png) no-repeat 0 -25px;}
+.genres li.musical {background: url(../img/movie-genres.png) no-repeat -25px -25px;}
+.genres li.mystery {background: url(../img/movie-genres.png) no-repeat -50px -25px;}
+.genres li.romance {background: url(../img/movie-genres.png) no-repeat -75px -25px;}
+.genres li.sci-fi {background: url(../img/movie-genres.png) no-repeat -100px -25px;}
+.genres li.sport {background: url(../img/movie-genres.png) no-repeat -125px -25px;}
+.genres li.thriller {background: url(../img/movie-genres.png) no-repeat -150px -25px;}
+.genres li.western {background: url(../img/movie-genres.png) no-repeat -175px -25px;}
+
+/* Items List */
+.items-list {padding-bottom: 20px;}
+
+.items-list h4 {padding: 10px 0;}
+
+.items-list a {color: #5293c2;}
+
+.items-list table {width: 100%;}
+
+.items-list th, .items-list a {font-weight: bold;}
+
+.items-list th, td {
+	padding: 15px;
+	text-align: left;
+	border: 1px solid #ccc;
+	font-size: 13px;
+	line-height: 18px;
+	color: #7c7e85;
+}
+
+.items-list tbody tr:nth-child(odd) {background: #f6f6f6;}
+
+/* User Reviews */
+.user-reviews .profile-image img {
+	width: 60px !important;
+	height: 70px !important;
+}
+
+.user-reviews .main-post-box h4 {
+	font-size: 14px !important;
+	line-height: 18px !important;
+	color: #7c7e85 !important;
+	margin: 10px 0;
+}
+
+/* Colour coordination for the comments */
+.positive {background: #daf1db !important;}
+.negative {background: #ffe3e3 !important;}
+
+/* User Review Form for Individual Movies */
+.user-review-form {
+	border-radius: 6px;
+ 	background-color: #ddd;
+ 	padding: 20px;
+}
+.user-review-form input[type=text], .user-review-form select, .user-review-form textarea {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: none;
+	border-radius: 6px;
+	box-sizing: border-box;
+}
+
+.user-review-form input[type=submit] {
+	width: 100%;
+	background-color: #4CAF50;
+	color: #ffffff;
+	font-weight: bold;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+.user-review-form input[type=submit]:hover {
+	background-color: #45a049;
+}
+
+/* Awards */
+.awards {
+	background: #efe3a4;
+	border: 6px double #ffffff;
+	margin: 15px -2px -3px -2px;
+	padding: 8px 24px !important;
+}
+
+.awards span {
+	display: block;
+	font-weight: bold;
+	font-size: 13px;
+	line-height: 18px;
+	color: #7c7e85;
 }
 
 /* Gallery */
@@ -659,7 +887,7 @@ hr {
 	height: 90px;
 	width: 143px;
 	border: 4px solid #868686;
-	margin-right: 24px;
+	margin-right: 24px !important;
 }
 
 .gallery .thumbnails iframe {
@@ -669,9 +897,9 @@ hr {
 	margin-right: 24px;
 }
 
-.gallery .thumbnails img:nth-child(5n+0) {margin-right: 0;}
+.gallery .thumbnails img:nth-child(5n+0) {margin-right: 0 !important;}
 
-.gallery .thumbnails iframe:nth-child(5n+0) {margin-right: 0;}
+.gallery .thumbnails iframe:nth-child(5n+0) {margin-right: 0 !important;}
 		
 .gallery .thumbnails img:hover {
 	border: 4px solid #5293c2;
@@ -680,6 +908,7 @@ hr {
 
 .gallery .thumbnails, .preview {
 	margin-top: 24px;
+	margin-bottom: 24px;
 }
 
 .gallery .preview img {
@@ -714,7 +943,14 @@ hr {
     outline: none;
 }
 
-/* Change background color of buttons on hover */
+.modal .tab button:first-child {
+	border-radius: 6px 0 0 0;
+}
+
+.modal .tab button:last-child {
+	border-radius: 0 6px 0 0;
+}
+
 .modal .tab button:hover {
     background-color: #181818;
     color: #ffffff;
@@ -726,42 +962,47 @@ hr {
     color: #181818;
 }
 
-/* Style the tab content */
-.modal .tabcontent {
+.modal .tab-content {
     display: none;
 }
 
-/* Full-width input fields */
+/* Style the form */
 .modal input[type=text], input[type=password] {
 	width: 100%;
 	padding: 14px 20px;
 	margin: 8px 0;
 	display: inline-block;
 	border: 1px solid #cccccc;
+	border-radius: 6px;
 	box-sizing: border-box;
 }
 
-/* Set a style for the buttons */
 .modal button {
 	padding: 14px 20px;
 	margin: 8px 0;
 	border: none;
+	border-radius: 6px;
 	cursor: pointer;
 }
 
-/* Extra styles for the login and cancel buttons */
+.modal label {
+	color: #181818;
+	font-size: 14px;
+	line-height: 18px;
+}
+
 .login, .signup {
 	width: auto;
 	background-color: #4CAF50;
 	color: #ffffff;
-	float: left;
+	float: right;
 }
 
 .cancel {
 	width: auto;
 	background-color: #f44336;
 	color: #ffffff;
-	float: right;
+	float: left;
 }
 
 .login, .signup, .cancel {width: 49%;}
@@ -772,18 +1013,20 @@ hr {
 .modal {
     display: none;
     position: fixed;
-    z-index: 10000;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
     padding-top: 60px;
 }
 
 .modal-content {
     background-color: #efefef;
+    border-radius: 0 6px 6px 6px;
     text-align: left;
     margin: 0 auto;
     width: 60%;

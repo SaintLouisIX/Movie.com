@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 
 	<!-- Title -->
-	<title>Movie Template</title>
+	<title>Movie.com | Premieres</title>
 
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="../css/style.css" media="screen">
@@ -23,14 +23,15 @@
 			
 			<ul class="nav">
 				<li><a href="../index.html">Home</a></li>
-				<li><a href="" onclick="return false;">Movies &amp; TV</a>
+				<li><a href="movies.html">Movies &amp; TV</a>
 					<ul class="dropdown">
-						<li><a href="top_movies.html">Top Movies</a></li>
-						<li><a href="top_tv-shows.html">Top TV Shows</a></li>
+						<li><a href="movies.html">Top Movies</a></li>
+						<li><a href="tv-shows.html">Top TV Shows</a></li>
 						<li><a href="premieres.html">Premieres</a></li>
+						<li><a href="actors.html">Actors</a></li>
 					</ul>
 				</li>
-				<li><a href="" onclick="return false;">Articles</a>
+				<li><a href="news.html">Articles</a>
 					<ul class="dropdown">
 						<li><a href="news.html">News</a></li>
 						<li><a href="reviews.html">Reviews</a></li>
@@ -38,7 +39,7 @@
 						<li><a href="interviews.html">Interviews</a></li>
 					</ul>
 				</li>
-				<li><a href="" onclick="return false;">Media</a>
+				<li><a href="trailers.html">Media</a>
 					<ul class="dropdown">
 						<li><a href="trailers.html">Trailers</a></li>						
 						<li><a href="pictures.html">Pictures</a></li>
@@ -53,6 +54,66 @@
 				<input type="submit" value="" id="search-submit">
 			</form>
 		</div>
+		
+		<div id="my-form" class="modal">
+			<div class="tab">
+			  <button id="Login_tablink" class="tablink" onclick="openTab(event, 'Login_tabcontent')"><b>Login</b></button>
+			  <button id="SignUp_tablink" class="tablink" onclick="openTab(event, 'SignUp_tabcontent')"><b>Sign up</b></button>
+			</div>
+		
+			<div id="Login_tabcontent" class="tab-content">
+				<form id="login-form" class="modal-content">
+					<div onclick="closePressed(event)" class="close" title="Close Modal">&times;</div>
+					<div class="container">
+						<label for="login-username"><b>Username</b></label>
+						<input id="login-username" type="text" placeholder="Enter Username" name="username" required>
+		
+						<label for="login-password"><b>Password</b></label>
+						<input id="login-password" type="password" placeholder="Enter Password" name="password" required>
+		
+						<input id="login-remember" type="checkbox" checked="checked">
+						<label for="login-remember">Remember me</label>
+						
+						<div>
+							<button type="submit" class="login" onclick="location.href='../index2.html';"><b>Login</b></button>
+							<button type="button" onclick="closePressed(event)" class="cancel"><b>Cancel</b></button>
+						</div>
+
+						<div class="clear-both"><!-- Clear Floats --></div>
+					</div>
+				</form>
+			</div>
+		
+			<div id="SignUp_tabcontent" class="tab-content">
+				<form id="signup-form" class="modal-content">
+					<div onclick="closePressed(event)" class="close" title="Close Modal">&times;</div>
+					<div class="container">
+						<label for="signup-email"><b>Email</b></label>
+						<input id="signup-email" type="text" placeholder="Enter Email" name="email" required>
+		
+						<label for="signup-password"><b>Password</b></label>
+						<input id="signup-password" type="password" placeholder="Enter Password" name="password" required>
+		
+						<label for="signup-repeat-password"><b>Repeat Password</b></label>
+						<input id="signup-repeat-password" type="password" placeholder="Repeat Password" name="password-repeat" required>
+						
+						<input id="signup-terms" type="checkbox" required>
+						<label for="signup-terms">By creating an account you agree to our <a href="#">Terms & Privacy</a>.</label>
+						<div class="clear-both"><!-- Clear Floats --></div>
+		
+						<input id="signup-remember" type="checkbox" checked="checked">
+						<label for="signup-remember">Remember me</label>
+						
+						<div>
+							<button type="submit" class="signup" onclick="location.href='../index2.html';"><b>Sign up</b></button>
+							<button type="button" onclick="closePressed(event);" class="cancel"><b>Cancel</b></button>
+						</div>
+						
+						<div class="clear-both"><!-- Clear Floats --></div>
+					</div>
+				</form>
+			</div>
+		</div>
 	</div>
 
 	<div id="content-wrapper">
@@ -60,6 +121,7 @@
 		<div class="center-wrapper">
 			<div id="main-posts">
 				<h4>Premieres</h4>
+				
 				<br/>
 				<label for="query_year">Year: </label>
 				<select id="query_year">
@@ -192,135 +254,124 @@
 				<button onclick = "sortByDate()">Search</button>
 
 				<div id="results">
-					<div class="main-post-box" data-date_year="2004" data-date_month="January" data-genres="comedy drama horror" data-rating="9">
+					<div class="main-post-box" date_year="2004" date_month="June">
 						<div class="float-left">
 							<a href="#"><img src="../img/content/metallica.png" alt=""></a>
 							<ul class="likes-views">
-								<li><a class="likes" href="#">165</a></li>
-								<li><a class="views" href="#">2,350</a></li>
+								<li class="likes">165</li>
+								<li class="views">2,350</li>
 							</ul>
 						</div>
-						<div>
-							<a href="#"><h1>The Chronicles of Riddick1</h1></a>
+						<div class="main-post-box-content">
+							<a href="#"><h1>The Chronicles of Riddick 1</h1></a>
 							<p class="float-right"><b>Rating:</b> <span>9.0</span>/10</p>
-							<p><b>Release Date:</b> 11 June 2004 (USA)<br>(Action, Adventure, Sci-Fi, Thriller)</p>
+							<p><b>Release Date:</b> 11 June 2004 (USA)</p>
+							<p><b>Genres:</b> Action, Adventure, Sci-Fi, Thriller</p>
 							<p><b>Director:</b> David Twohy</p>
 							<p class="main-actors"><b>Actors:</b>  Vin Diesel, Judi Dench, Colm Feore</p>
-							<a class="float-right" href="" onclick="return false;"><p>&raquo; More Info</p></a>					
+							<a class="float-right more-info" href="#">&raquo; More Info</a>					
 						</div>
 					</div>
 					
-					<div class="main-post-box" data-date_year="2005" data-date_month="February" data-genres="comedy drama horror" data-rating="9">
+					<div class="main-post-box" date_year="2005" date_month="January">
 						<div class="float-left">
 							<a href="#"><img src="../img/content/metallica.png" alt=""></a>
 							<ul class="likes-views">
-								<li><a class="likes" href="#">165</a></li>
-								<li><a class="views" href="#">2,350</a></li>
+								<li class="likes">165</li>
+								<li class="views">2,350</li>
 							</ul>
 						</div>
-						<div>
-							<a href="#"><h1>The Chronicles of Riddick2</h1></a>
+						<div class="main-post-box-content">
+							<a href="#"><h1>The Chronicles of Riddick 2</h1></a>
 							<p class="float-right"><b>Rating:</b> <span>9.0</span>/10</p>
-							<p><b>Release Date:</b> 11 June 2005 (USA)<br>(Action, Adventure, Sci-Fi, Thriller)</p>
+							<p><b>Release Date:</b> 11 January 2005 (USA)</p>
+							<p><b>Genres:</b> Action, Adventure, Sci-Fi, Thriller</p>
 							<p><b>Director:</b> David Twohy</p>
 							<p class="main-actors"><b>Actors:</b>  Vin Diesel, Judi Dench, Colm Feore</p>
-							<a class="float-right" href="" onclick="return false;"><p>&raquo; More Info</p></a>					
+							<a class="float-right more-info" href="#">&raquo; More Info</a>					
 						</div>
 					</div>
 					
-					<div class="main-post-box" data-date_year="2005" data-date_month="February" data-genres="comedy drama horror" data-rating="9">
+					<div class="main-post-box" date_year="2007" date_month="January">
 						<div class="float-left">
 							<a href="#"><img src="../img/content/metallica.png" alt=""></a>
 							<ul class="likes-views">
-								<li><a class="likes" href="#">165</a></li>
-								<li><a class="views" href="#">2,350</a></li>
+								<li class="likes">165</li>
+								<li class="views">2,350</li>
 							</ul>
 						</div>
-						<div>
-							<a href="#"><h1>The Chronicles of Riddick3</h1></a>
+						<div class="main-post-box-content">
+							<a href="#"><h1>The Chronicles of Riddick 3</h1></a>
 							<p class="float-right"><b>Rating:</b> <span>9.0</span>/10</p>
-							<p><b>Release Date:</b> 11 June 2004 (USA)<br>(Action, Adventure, Sci-Fi, Thriller)</p>
+							<p><b>Release Date:</b> 11 January 2007 (USA)</p>
+							<p><b>Genres:</b> Action, Adventure, Sci-Fi, Thriller</p>
 							<p><b>Director:</b> David Twohy</p>
 							<p class="main-actors"><b>Actors:</b>  Vin Diesel, Judi Dench, Colm Feore</p>
-							<a class="float-right" href="" onclick="return false;"><p>&raquo; More Info</p></a>					
+							<a class="float-right more-info" href="#">&raquo; More Info</a>					
 						</div>
 					</div>
 					
-					<div class="main-post-box" date_year="2004" date_month="2014" genres="comedy drama horror" rating="9">
+					<div class="main-post-box" date_year="2007" date_month="December">
 						<div class="float-left">
 							<a href="#"><img src="../img/content/metallica.png" alt=""></a>
 							<ul class="likes-views">
-								<li><a class="likes" href="#">165</a></li>
-								<li><a class="views" href="#">2,350</a></li>
+								<li class="likes">165</a></li>
+								<li class="views">2,350</a></li>
 							</ul>
 						</div>
-						<div>
-							<a href="#"><h1>The Chronicles of Riddick4</h1></a>
+						<div class="main-post-box-content">
+							<a href="#"><h1>The Chronicles of Riddick 4</h1></a>
 							<p class="float-right"><b>Rating:</b> <span>9.0</span>/10</p>
-							<p><b>Release Date:</b> 11 June 2004 (USA)<br>(Action, Adventure, Sci-Fi, Thriller)</p>
+							<p><b>Release Date:</b> 11 December 2007 (USA)</p>
+							<p><b>Genres:</b> Action, Adventure, Sci-Fi, Thriller</p>
 							<p><b>Director:</b> David Twohy</p>
 							<p class="main-actors"><b>Actors:</b>  Vin Diesel, Judi Dench, Colm Feore</p>
-							<a class="float-right" href="" onclick="return false;"><p>&raquo; More Info</p></a>					
+							<a class="float-right more-info" href="#">&raquo; More Info</a>					
 						</div>
 					</div>
 				
-					<div class="main-post-box" date_year="2004" date_month="2014" genres="comedy drama horror" rating="9">
-					<div class="float-left">
-						<a href="#"><img src="../img/content/metallica.png" alt=""></a>
-						<ul class="likes-views">
-							<li><a class="likes" href="#">165</a></li>
-							<li><a class="views" href="#">2,350</a></li>
-						</ul>
+					<div class="main-post-box" date_year="2007" date_month="February">
+						<div class="float-left">
+							<a href="#"><img src="../img/content/metallica.png" alt=""></a>
+							<ul class="likes-views">
+								<li class="likes">165</li>
+								<li class="views">2,350</li>
+							</ul>
+						</div>
+						<div class="main-post-box-content">
+							<a href="#"><h1>The Chronicles of Riddick 5</h1></a>
+							<p class="float-right"><b>Rating:</b> <span>9.0</span>/10</p>
+							<p><b>Release Date:</b> 11 February 2007 (USA)</p>
+							<p><b>Genres:</b> Action, Adventure, Sci-Fi, Thriller</p>
+							<p><b>Director:</b> David Twohy</p>
+							<p class="main-actors"><b>Actors:</b>  Vin Diesel, Judi Dench, Colm Feore</p>
+							<a class="float-right more-info" href="#">&raquo; More Info</a>					
+						</div>
 					</div>
-					<div>
-						<a href="#"><h1>The Chronicles of Riddick5</h1></a>
-						<p class="float-right"><b>Rating:</b> <span>9.0</span>/10</p>
-						<p><b>Release Date:</b> 11 June 2004 (USA)<br>(Action, Adventure, Sci-Fi, Thriller)</p>
-						<p><b>Director:</b> David Twohy</p>
-						<p class="main-actors"><b>Actors:</b>  Vin Diesel, Judi Dench, Colm Feore</p>
-						<a class="float-right" href="" onclick="return false;"><p>&raquo; More Info</p></a>					
-					</div>
-				</div>
 				</div>
 			</div>
 
 			<div id="side-bar">
-				<h4>Advertisements</h4>
- 
-				<div class="sidebar-post">
-					<a class="video-icon" href="#"><img src="../img/content/side-post_1.png" alt=""></a>
-					<a href="#"><h3>A Fantastic Fear of Everything</h3></a>
-					<p>Laos, alongside many of its Southeast Asian neighbours, is well known for producing counterfeit goods of all types.</p>
-					<ul class="likes-views">
-						<li><a class="likes" href="#">165</a></li>
-						<li><a class="views" href="#">2,350</a></li>
-					</ul>
-				</div>
- 
-				<div class="sidebar-post">
-					<a class="video-icon" href="#"><img src="../img/content/side-post_2.png" alt=""></a>
-					<a href="#"><h3>To Rome with Love</h3></a>
-					<p>Laos, alongside many of its Southeast Asian neighbours, is well known for producing counterfeit goods of all types.</p>
-					<ul class="likes-views">
-						<li><a class="likes" href="#">165</a></li>
-						<li><a class="views" href="#">2,350</a></li>
-					</ul>
-				</div>
- 
-				<div class="sidebar-post">
-					<a class="video-icon" href="#"><img src="../img/content/side-post_3.png" alt=""></a>
-					<a href="#"><h3>Loopers</h3></a>
-					<p>Laos, alongside many of its Southeast Asian neighbours, is well known for producing counterfeit goods of all types.</p>
-					<ul class="likes-views">
-						<li><a class="likes" href="#">165</a></li>
-						<li><a class="views" href="#">2,350</a></li>
-					</ul>
-				</div>
- 
+				<h4>Genres</h4>
+				<ul class="genres">
+					<li class="action"><a href="#">Action</a></li>
+					<li class="adventure"><a href="#">Adventure</a></li>
+					<li class="animation"><a href="#">Animation</a></li>
+					<li class="comedy"><a href="#">Comedy</a></li>
+					<li class="crime"><a href="#">Crime</a></li>
+					<li class="drama"><a href="#">Drama</a></li>
+					<li class="fantasy"><a href="#">Fantasy</a></li>
+					<li class="history"><a href="#">History</a></li>
+					<li class="horror"><a href="#">Horror</a></li>
+					<li class="musical"><a href="#">Musical</a></li>
+					<li class="mystery"><a href="#">Mystery</a></li>
+					<li class="romance"><a href="#">Romance</a></li>
+					<li class="sci-fi"><a href="#">Sci-Fi</a></li>
+					<li class="sport"><a href="#">Sport</a></li>
+					<li class="thriller"><a href="#">Thriller</a></li>
+					<li class="western"><a href="#">Western</a></li>
+				</ul>
 			</div>
- 
-			<div class="clear-both"><!-- Clear Floats --></div>
- 
 		</div>
 		
 		<div class="clear-both"><!-- Clear Floats --></div>
@@ -337,16 +388,17 @@
 			</div>
 	 
 			<div class="one-fifth">
-				<a href="" onclick="return false;"><h3>Movies &amp; TV</h3></a>
+				<a href="movies.html"><h3>Movies &amp; TV</h3></a>
 				<ul class="links-list">
-					<li><a href="top_movies.html">Top Movies</a></li>
-					<li><a href="top_tv-shows.html">Top TV Shows</a></li>
+					<li><a href="movies.html">Top Movies</a></li>
+					<li><a href="tv-shows.html">Top TV Shows</a></li>
 					<li><a href="premieres.html">Premieres</a></li>
+					<li><a href="actors.html">Actors</a></li>
 				</ul>
 			</div>
 
 			<div class="one-fifth">
-				<a href="" onclick="return false;"><h3>Articles</h3></a>
+				<a href="news.html"><h3>Articles</h3></a>
 				<ul class="links-list">
 					<li><a href="news.html">News</a></li>
 					<li><a href="reviews.html">Reviews</a></li>
@@ -356,7 +408,7 @@
 			</div>
 
 			<div class="one-fifth">
-				<a href="" onclick="return false;"><h3>Media</h3></a>
+				<a href="trailers.html"><h3>Media</h3></a>
 				<ul class="links-list">
 					<li><a href="trailers.html">Trailers</a></li>						
 					<li><a href="pictures.html">Pictures</a></li>
@@ -377,54 +429,6 @@
 
 			<div class="clear-both"><!-- Clear Floats --></div>
 			
-		</div>
-	</div>
-	<div id="my-form" class="modal">
-		<div class="tab">
-		  <button id ="Login_tablink" class="tablink" onclick="openTab(event, 'Login_tabcontent')"><b>Login</b></button>
-		  <button id ="SignUp_tablink" class="tablink" onclick="openTab(event, 'SignUp_tabcontent')"><b>Sign up</b></button>
-		</div>
-	
-		<div id="Login_tabcontent" class="tabcontent">
-			<form id="login-form" class="modal-content">
-				<div onclick="document.getElementById('my-form').style.display='none'; document.getElementById('login-form').reset();" class="close" title="Close Modal">&times;</div>
-				<div class="container">
-					<label><b>Username</b></label>
-					<input type="text" placeholder="Enter Username" name="username" required>
-	
-					<label><b>Password</b></label>
-					<input type="password" placeholder="Enter Password" name="password" required>
-	
-					<div>
-						<button type="submit" class="login"><b>Login</b></button>
-						<button type="button" onclick="document.getElementById('my-form').style.display='none'; document.getElementById('login-form').reset();" class="cancel"><b>Cancel</b></button>
-					</div>
-					<input type="checkbox" checked="checked"> Remember me
-				</div>
-			</form>
-		</div>
-	
-		<div id="SignUp_tabcontent" class="tabcontent">
-			<form id="signup-form" class="modal-content">
-				<div onclick="document.getElementById('my-form').style.display='none'; document.getElementById('Sign up').reset();" class="close" title="Close Modal">&times;</div>
-				<div class="container">
-					<label><b>Email</b></label>
-					<input type="text" placeholder="Enter Email" name="email" required>
-	
-					<label><b>Password</b></label>
-					<input type="password" placeholder="Enter Password" name="password" required>
-	
-					<label><b>Repeat Password</b></label>
-					<input type="password" placeholder="Repeat Password" name="password-repeat" required>
-					<input type="checkbox" required> By creating an account you agree to our <a href="#">Terms & Privacy</a>.
-	
-					<div>
-						<button type="submit" class="signup"><b>Sign up</b></button>					
-						<button type="button" onclick="document.getElementById('my-form').style.display='none'; document.getElementById('Sign up').reset();" class="cancel"><b>Cancel</b></button>
-					</div>
-					<input type="checkbox" checked="checked"> Remember me
-				</div>
-			</form>
 		</div>
 	</div>
 </body>

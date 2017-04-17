@@ -1,7 +1,7 @@
 /* Login and Sign up forms */
 function openTab(evt, tabName) {
     var i, tabcontent, tablink;
-    tabcontent = document.getElementsByClassName("tabcontent");
+    tabcontent = document.getElementsByClassName("tab-content");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
@@ -23,7 +23,7 @@ function menuLoginPressed(evt) {
 function closePressed(evt) {
 	evt.preventDefault();
 	var i, tabcontent, tablink;
-	tabcontent = document.getElementsByClassName("tabcontent");
+	tabcontent = document.getElementsByClassName("tab-content");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
